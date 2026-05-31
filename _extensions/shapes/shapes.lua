@@ -78,17 +78,18 @@ function Div(el)
   })
 
   local class_str = table.concat(el.classes, " ")
-  local inner = pandoc.write(pandoc.Pandoc(el.content), "html")
 
-  local html = string.format(
+  local open = pandoc.RawBlock("html", string.format(
     '<div class="shape-wrapper %s">'
     .. '<svg class="shape-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">%s</svg>'
-    .. '<div class="shape-content">%s</div>'
-    .. '</div>',
+    .. '<div class="shape-content">',
     class_str,
-    shapes[shape],
-    inner
-  )
+    shapes[shape]
+  ))
+  local close = pandoc.RawBlock("html", "</div></div>")
 
-  return pandoc.RawBlock("html", html)
+  local blocks = pandoc.Blocks({ open })
+  blocks:extend(el.content)
+  blocks:insert(close)
+  return blocks
 end

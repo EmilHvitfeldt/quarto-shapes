@@ -32,7 +32,7 @@
     "href": "examples/basic.html#callouts-bubbles",
     "title": "Basic Usage",
     "section": "Callouts & Bubbles",
-    "text": "Callouts & Bubbles\nHello!\nHi!\nHey!\nYo!\nHmm…\nPoof\nBoom!"
+    "text": "Callouts & Bubbles\nHello!\nHi!"
   },
   {
     "objectID": "examples/basic.html#flowchart",
@@ -110,5 +110,19 @@
     "title": "quarto-shapes",
     "section": "Examples",
     "text": "Examples\n\nBasic Usage\nView Example Source Code"
+  },
+  {
+    "objectID": "examples/basic.html#symbols-nature",
+    "href": "examples/basic.html#symbols-nature",
+    "title": "Basic Usage",
+    "section": "Symbols & Nature",
+    "text": "Symbols & Nature"
+  },
+  {
+    "objectID": "examples/basic.html#functional-flowchart",
+    "href": "examples/basic.html#functional-flowchart",
+    "title": "Basic Usage",
+    "section": "Functional & Flowchart",
+    "text": "Functional & Flowchart"
   }
 ]

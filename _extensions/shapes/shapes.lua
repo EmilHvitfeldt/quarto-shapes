@@ -1,20 +1,23 @@
 -- shapes.lua
--- TODO: implement filter logic
-
-local css_injected = false
 
 local shapes = {
-  circle       = '<circle cx="50" cy="50" r="47" class="shape-path"/>',
-  square       = '<rect x="2" y="2" width="96" height="96" class="shape-path"/>',
-  rectangle    = '<rect x="2" y="15" width="96" height="70" class="shape-path"/>',
-  triangle     = '<polygon points="50,2 98,98 2,98" class="shape-path"/>',
-  diamond      = '<polygon points="50,2 98,50 50,98 2,50" class="shape-path"/>',
-  hexagon      = '<polygon points="25,2 75,2 98,50 75,98 25,98 2,50" class="shape-path"/>',
-  pentagon     = '<polygon points="50,2 98,35 80,95 20,95 2,35" class="shape-path"/>',
-  octagon      = '<polygon points="29,2 71,2 98,29 98,71 71,98 29,98 2,71 2,29" class="shape-path"/>',
-  oval         = '<ellipse cx="50" cy="50" rx="48" ry="30" class="shape-path"/>',
+  circle        = '<circle cx="50" cy="50" r="47" class="shape-path"/>',
+  square        = '<rect x="2" y="2" width="96" height="96" class="shape-path"/>',
+  rectangle     = '<rect x="2" y="15" width="96" height="70" class="shape-path"/>',
+  triangle      = '<polygon points="50,2 98,98 2,98" class="shape-path"/>',
+  diamond       = '<polygon points="50,2 98,50 50,98 2,50" class="shape-path"/>',
+  hexagon       = '<polygon points="25,2 75,2 98,50 75,98 25,98 2,50" class="shape-path"/>',
+  pentagon      = '<polygon points="50,2 98,35 80,95 20,95 2,35" class="shape-path"/>',
+  octagon       = '<polygon points="29,2 71,2 98,29 98,71 71,98 29,98 2,71 2,29" class="shape-path"/>',
+  oval          = '<ellipse cx="50" cy="50" rx="48" ry="30" class="shape-path"/>',
   parallelogram = '<polygon points="20,2 98,2 80,98 2,98" class="shape-path"/>',
-  trapezoid    = '<polygon points="20,2 80,2 98,98 2,98" class="shape-path"/>',
+  trapezoid     = '<polygon points="20,2 80,2 98,98 2,98" class="shape-path"/>',
+  star          = '<polygon points="50,2 61,35 96,35 68,56 78,89 50,69 22,89 32,56 4,35 39,35" class="shape-path"/>',
+  heart         = '<path d="M50,85 C30,70 5,60 5,40 C5,20 20,10 35,15 C42,17 48,22 50,28 C52,22 58,17 65,15 C80,10 95,20 95,40 C95,60 70,70 50,85 Z" class="shape-path"/>',
+  cloud         = '<path d="M28,65 C15,65 5,56 5,45 C5,35 12,27 22,26 C22,14 31,5 43,5 C52,5 59,10 63,18 C66,15 71,13 76,13 C86,13 94,21 94,31 C97,33 97,40 97,47 C97,57 89,65 79,65 Z" class="shape-path"/>',
+  arrow         = '<polygon points="2,30 65,30 65,10 98,50 65,90 65,70 2,70" class="shape-path"/>',
+  chevron       = '<polygon points="2,2 65,2 98,50 65,98 2,98 35,50" class="shape-path"/>',
+  cross         = '<polygon points="35,2 65,2 65,35 98,35 98,65 65,65 65,98 35,98 35,65 2,65 2,35 35,35" class="shape-path"/>',
 }
 
 local function get_shape_name(classes)
@@ -24,21 +27,15 @@ local function get_shape_name(classes)
   end
 end
 
-local function inject_css(doc)
-  local css_path = quarto.utils.resolve_path("shapes.css")
-  local f = io.open(css_path, "r")
-  if not f then return doc end
-  local css = f:read("*a")
-  f:close()
-  local style = pandoc.RawBlock("html", "<style>\n" .. css .. "\n</style>")
-  table.insert(doc.blocks, 1, style)
-  return doc
-end
-
 function Div(el)
   local shape = get_shape_name(el.classes)
   if not shape then return end
-  css_injected = true
+
+  quarto.doc.add_html_dependency({
+    name = "shapes",
+    version = "0.1.0",
+    stylesheets = { "shapes.css" }
+  })
 
   local class_str = table.concat(el.classes, " ")
   local inner = pandoc.write(pandoc.Pandoc(el.content), "html")
@@ -54,10 +51,4 @@ function Div(el)
   )
 
   return pandoc.RawBlock("html", html)
-end
-
-function Pandoc(doc)
-  if css_injected then
-    return inject_css(doc)
-  end
 end

@@ -68,6 +68,10 @@ local function get_shape_name(classes)
 end
 
 function Div(el)
+  if not quarto.doc.is_format("html:js") then
+    return pandoc.Null()
+  end
+
   local shape = get_shape_name(el.classes)
   if not shape then return end
 

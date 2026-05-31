@@ -7,11 +7,32 @@
     "text": "Circle\nSquare\nTriangle\nHexagon\nPentagon\nOctagon\nDiamond\nOval\nParallelogram\nTrapezoid\nRounded\nSemicircle"
   },
   {
-    "objectID": "examples/basic.html#shapes",
-    "href": "examples/basic.html#shapes",
+    "objectID": "examples/basic.html#basic-geometric",
+    "href": "examples/basic.html#basic-geometric",
     "title": "Basic Usage",
     "section": "",
-    "text": "Circle\nHexagon\nTriangle"
+    "text": "Circle\nSquare\nTriangle\nHexagon\nPentagon\nOctagon\nDiamond\nOval\nParallelogram\nTrapezoid\nRounded\nSemicircle"
+  },
+  {
+    "objectID": "examples/basic.html#stars",
+    "href": "examples/basic.html#stars",
+    "title": "Basic Usage",
+    "section": "Stars",
+    "text": "Stars\n4-pt\n5-pt\n6-pt\n8-pt\nSun"
+  },
+  {
+    "objectID": "examples/basic.html#symbols-nature",
+    "href": "examples/basic.html#symbols-nature",
+    "title": "Basic Usage",
+    "section": "Symbols & Nature",
+    "text": "Symbols & Nature\nHeart\nMoon\nCloud\nLightning\nTeardrop\nDonut"
+  },
+  {
+    "objectID": "examples/basic.html#functional",
+    "href": "examples/basic.html#functional",
+    "title": "Basic Usage",
+    "section": "Functional",
+    "text": "Functional\nArrow\nChevron\nCross\nShield\nHello!"
   },
   {
     "objectID": "examples/basic.html#fill-stroke",
@@ -61,33 +82,5 @@
     "title": "quarto-shapes",
     "section": "Examples",
     "text": "Examples\n\nBasic Usage\nView Example Source Code"
-  },
-  {
-    "objectID": "examples/basic.html#basic-geometric",
-    "href": "examples/basic.html#basic-geometric",
-    "title": "Basic Usage",
-    "section": "",
-    "text": "Circle\nSquare\nTriangle\nHexagon\nPentagon\nOctagon\nDiamond\nOval\nParallelogram\nTrapezoid\nRounded\nSemicircle"
-  },
-  {
-    "objectID": "examples/basic.html#stars",
-    "href": "examples/basic.html#stars",
-    "title": "Basic Usage",
-    "section": "Stars",
-    "text": "Stars\n4-pt\n5-pt\n6-pt\n8-pt\nSun"
-  },
-  {
-    "objectID": "examples/basic.html#symbols-nature",
-    "href": "examples/basic.html#symbols-nature",
-    "title": "Basic Usage",
-    "section": "Symbols & Nature",
-    "text": "Symbols & Nature\nHeart\nMoon\nCloud\nLightning\nTeardrop\nDonut"
-  },
-  {
-    "objectID": "examples/basic.html#functional",
-    "href": "examples/basic.html#functional",
-    "title": "Basic Usage",
-    "section": "Functional",
-    "text": "Functional\nArrow\nChevron\nCross\nShield\nHello!"
   }
 ]

@@ -5,28 +5,138 @@ filters:
   - ../_extensions/shapes/shapes.lua
 ---
 
-## Shapes
+## Basic Geometric
 
 ::: {.shape-circle .shape-fill-blue .shape-lg}
 Circle
 :::
 
-::: {.shape-hexagon .shape-fill-green .shape-lg}
-Hexagon
+::: {.shape-square .shape-fill-green .shape-lg}
+Square
 :::
 
 ::: {.shape-triangle .shape-fill-red .shape-lg}
 Triangle
 :::
 
+::: {.shape-hexagon .shape-fill-purple .shape-lg}
+Hexagon
+:::
+
+::: {.shape-pentagon .shape-fill-orange .shape-lg}
+Pentagon
+:::
+
+::: {.shape-octagon .shape-fill-blue .shape-lg}
+Octagon
+:::
+
+::: {.shape-diamond .shape-fill-green .shape-lg}
+Diamond
+:::
+
+::: {.shape-oval .shape-fill-red .shape-lg}
+Oval
+:::
+
+::: {.shape-parallelogram .shape-fill-purple .shape-lg}
+Parallelogram
+:::
+
+::: {.shape-trapezoid .shape-fill-orange .shape-lg}
+Trapezoid
+:::
+
+::: {.shape-rounded-square .shape-fill-blue .shape-lg}
+Rounded
+:::
+
+::: {.shape-semicircle .shape-fill-green .shape-lg}
+Semicircle
+:::
+
+## Stars
+
+::: {.shape-star-4 .shape-fill-yellow .shape-lg}
+4-pt
+:::
+
+::: {.shape-star .shape-fill-yellow .shape-lg}
+5-pt
+:::
+
+::: {.shape-star-6 .shape-fill-yellow .shape-lg}
+6-pt
+:::
+
+::: {.shape-star-8 .shape-fill-yellow .shape-lg}
+8-pt
+:::
+
+::: {.shape-sun .shape-fill-yellow .shape-lg}
+Sun
+:::
+
+## Symbols & Nature
+
+::: {.shape-heart .shape-fill-red .shape-lg}
+Heart
+:::
+
+::: {.shape-moon .shape-fill-blue .shape-lg}
+Moon
+:::
+
+::: {.shape-cloud .shape-fill-white .shape-stroke-blue .shape-stroke-md .shape-lg}
+Cloud
+:::
+
+::: {.shape-lightning .shape-fill-yellow .shape-lg}
+Lightning
+:::
+
+::: {.shape-teardrop .shape-fill-blue .shape-lg}
+Teardrop
+:::
+
+::: {.shape-donut .shape-fill-orange .shape-lg}
+Donut
+:::
+
+## Functional
+
+::: {.shape-arrow .shape-fill-blue .shape-lg}
+Arrow
+:::
+
+::: {.shape-chevron .shape-fill-green .shape-lg}
+Chevron
+:::
+
+::: {.shape-cross .shape-fill-red .shape-lg}
+Cross
+:::
+
+::: {.shape-shield .shape-fill-purple .shape-lg}
+Shield
+:::
+
+::: {.shape-speech-bubble .shape-fill-blue .shape-lg}
+Hello!
+:::
+
 ## Fill & Stroke
 
 ::: {.shape-circle .shape-fill-none .shape-stroke-blue .shape-stroke-lg .shape-lg}
-Outline only
+Outline
 :::
 
 ::: {.shape-square .shape-fill-yellow .shape-stroke-black .shape-stroke-sm .shape-lg}
 Fill + stroke
+:::
+
+::: {.shape-star .shape-fill-red .shape-stroke-black .shape-stroke-md .shape-lg}
+Both
 :::
 
 ## Rotation
@@ -35,8 +145,12 @@ Fill + stroke
 Flipped
 :::
 
-::: {.shape-diamond .shape-fill-orange .shape-rotate-45 .shape-lg}
-Rotated
+::: {.shape-arrow .shape-fill-blue .shape-rotate-90 .shape-lg}
+Down
+:::
+
+::: {.shape-chevron .shape-fill-green .shape-rotate-180 .shape-lg}
+Left
 :::
 
 ## Sizing

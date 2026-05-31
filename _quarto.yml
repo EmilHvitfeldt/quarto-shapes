@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - examples/basic.qmd
+
+website:
+  title: "quarto-shapes"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Examples
+        menu:
+          - href: examples/basic.qmd
+            text: Basic Usage
+
+format:
+  html:
+    theme: cosmo
+    toc: true

@@ -1,0 +1,43 @@
+---
+title: "quarto-shapes"
+subtitle: "CSS shape classes for Quarto documents and presentations"
+---
+
+Style divs as shapes that can contain text and other elements. Supports fill, stroke, rotation, and sizing — all composable as classes.
+
+## Installation
+
+```bash
+quarto add emilhvitfeldt/quarto-shapes
+```
+
+## Quick Start
+
+Add to your YAML front matter:
+
+```yaml
+---
+title: My Document
+format: html
+filters:
+  - shapes
+---
+```
+
+Then wrap any content in a shape div:
+
+```markdown
+::: {.shape-circle .shape-fill-blue}
+Hello
+:::
+```
+
+## Examples
+
+### Basic Usage
+
+[View Example](examples/basic.html){.btn .btn-primary}
+[Source Code](https://github.com/emilhvitfeldt/quarto-shapes/blob/main/examples/basic.qmd){.btn .btn-secondary}
+
+<iframe src="examples/basic.html" width="100%" height="400"
+  style="border: 1px solid #ccc; border-radius: 4px;"></iframe>

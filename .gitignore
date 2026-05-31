@@ -1,0 +1,14 @@
+# Generated files
+*_files/
+*.pdf
+
+# Keep docs/ for GitHub Pages
+!docs/
+
+# Editor/tool files
+.claude/settings.local.json
+/.luarc.json
+
+/.quarto/
+**/*.quarto_ipynb
+.Rproj.user

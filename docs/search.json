@@ -1,59 +1,59 @@
 [
   {
-    "objectID": "examples/basic.html",
-    "href": "examples/basic.html",
+    "objectID": "examples/basic.html#polygons",
+    "href": "examples/basic.html#polygons",
     "title": "Basic Usage",
-    "section": "",
-    "text": "Circle\nSquare\nTriangle\nHexagon\nPentagon\nOctagon\nDiamond\nOval\nParallelogram\nTrapezoid\nRounded\nSemicircle"
-  },
-  {
-    "objectID": "examples/basic.html#basic-geometric",
-    "href": "examples/basic.html#basic-geometric",
-    "title": "Basic Usage",
-    "section": "",
-    "text": "Circle\nSquare\nTriangle\nHexagon\nPentagon\nOctagon\nDiamond\nOval\nParallelogram\nTrapezoid\nRounded\nSemicircle"
+    "section": "Polygons",
+    "text": "Polygons"
   },
   {
     "objectID": "examples/basic.html#stars",
     "href": "examples/basic.html#stars",
     "title": "Basic Usage",
     "section": "Stars",
-    "text": "Stars\n4-pt\n5-pt\n6-pt\n8-pt\nSun"
+    "text": "Stars"
   },
   {
     "objectID": "examples/basic.html#symbols-nature",
     "href": "examples/basic.html#symbols-nature",
     "title": "Basic Usage",
     "section": "Symbols & Nature",
-    "text": "Symbols & Nature\nHeart\nMoon\nCloud\nLightning\nTeardrop\nDonut"
+    "text": "Symbols & Nature"
   },
   {
-    "objectID": "examples/basic.html#functional",
-    "href": "examples/basic.html#functional",
+    "objectID": "examples/basic.html#arrows",
+    "href": "examples/basic.html#arrows",
     "title": "Basic Usage",
-    "section": "Functional",
-    "text": "Functional\nArrow\nChevron\nCross\nShield\nHello!"
+    "section": "Arrows",
+    "text": "Arrows"
+  },
+  {
+    "objectID": "examples/basic.html#callouts-bubbles",
+    "href": "examples/basic.html#callouts-bubbles",
+    "title": "Basic Usage",
+    "section": "Callouts & Bubbles",
+    "text": "Callouts & Bubbles\nHello!\nHi!"
+  },
+  {
+    "objectID": "examples/basic.html#functional-flowchart",
+    "href": "examples/basic.html#functional-flowchart",
+    "title": "Basic Usage",
+    "section": "Functional & Flowchart",
+    "text": "Functional & Flowchart"
   },
   {
     "objectID": "examples/basic.html#fill-stroke",
     "href": "examples/basic.html#fill-stroke",
     "title": "Basic Usage",
     "section": "Fill & Stroke",
-    "text": "Fill & Stroke\nOutline\nFill + stroke\nBoth"
+    "text": "Fill & Stroke"
   },
   {
     "objectID": "examples/basic.html#rotation",
     "href": "examples/basic.html#rotation",
     "title": "Basic Usage",
     "section": "Rotation",
-    "text": "Rotation\nFlipped\nDown\nLeft"
-  },
-  {
-    "objectID": "examples/basic.html#sizing",
-    "href": "examples/basic.html#sizing",
-    "title": "Basic Usage",
-    "section": "Sizing",
-    "text": "Sizing\nsm\nmd\nlg"
+    "text": "Rotation"
   },
   {
     "objectID": "index.html",

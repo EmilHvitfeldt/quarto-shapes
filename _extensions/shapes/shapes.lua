@@ -27,6 +27,34 @@ local shapes = {
   ["speech-bubble"]  = '<path d="M5,5 L95,5 L95,68 L62,68 L50,88 L38,68 L5,68 Z" class="shape-path"/>',
   heart         = '<path d="M50,85 C30,70 5,60 5,40 C5,20 20,10 35,15 C42,17 48,22 50,28 C52,22 58,17 65,15 C80,10 95,20 95,40 C95,60 70,70 50,85 Z" class="shape-path"/>',
   cloud         = '<path d="M28,65 C15,65 5,56 5,45 C5,35 12,27 22,26 C22,14 31,5 43,5 C52,5 59,10 63,18 C66,15 71,13 76,13 C86,13 94,21 94,31 C97,33 97,40 97,47 C97,57 89,65 79,65 Z" class="shape-path"/>',
+  -- More polygons
+  heptagon      = '<polygon points="50,3 87,21 96,60 70,92 30,92 4,60 13,21" class="shape-path"/>',
+  decagon       = '<polygon points="50,3 78,12 95,36 95,64 78,88 50,97 22,88 5,64 5,36 22,12" class="shape-path"/>',
+  dodecagon     = '<polygon points="50,3 74,9 91,27 97,50 91,74 74,91 50,97 26,91 9,74 3,50 9,26 26,9" class="shape-path"/>',
+  -- More stars
+  ["star-10"]   = '<polygon points="50,3 56,31 78,12 66,38 95,36 70,50 95,64 66,62 78,88 56,69 50,97 44,69 22,88 34,62 5,64 30,50 5,36 34,38 22,12 44,31" class="shape-path"/>',
+  ["star-12"]   = '<polygon points="50,3 56,27 74,9 67,33 91,27 73,44 97,50 73,56 91,74 67,67 74,91 56,73 50,97 44,73 26,91 33,67 9,74 27,56 3,50 27,44 9,26 33,33 26,9 44,27" class="shape-path"/>',
+  starburst     = '<polygon points="50,3 60,13 74,9 77,23 91,27 87,40 97,50 87,60 91,74 77,77 74,91 60,87 50,97 40,87 26,91 23,77 9,74 13,60 3,50 13,40 9,26 23,23 26,9 40,13" class="shape-path"/>',
+  -- More arrows
+  ["arrow-double"]   = '<polygon points="2,50 20,15 20,35 80,35 80,15 98,50 80,85 80,65 20,65 20,85" class="shape-path"/>',
+  ["pentagon-arrow"] = '<polygon points="2,15 72,15 98,50 72,85 2,85" class="shape-path"/>',
+  ["notched-arrow"]  = '<polygon points="2,35 60,35 60,15 98,50 60,85 60,65 2,65 15,50" class="shape-path"/>',
+  -- Callouts
+  ["callout-round"]  = '<path d="M50,5 C76,5 95,24 95,50 C95,76 76,95 50,95 L30,98 L38,85 C18,79 5,66 5,50 C5,24 24,5 50,5 Z" class="shape-path"/>',
+  -- Flowchart shapes
+  terminator    = '<rect x="5" y="20" width="90" height="60" rx="30" ry="30" class="shape-path"/>',
+  cylinder      = '<path d="M5,20 A45,15 0 0,1 95,20 L95,80 A45,15 0 0,1 5,80 Z" class="shape-path"/>',
+  document      = '<path d="M5,5 L95,5 L95,78 C82,90 70,68 57,80 C44,92 32,70 18,82 C12,87 8,88 5,86 Z" class="shape-path"/>',
+  ["manual-input"] = '<polygon points="5,30 95,5 95,95 5,95" class="shape-path"/>',
+  delay         = '<path d="M5,5 L60,5 A45,45 0 0,1 60,95 L5,95 Z" class="shape-path"/>',
+  -- Block shapes
+  pie           = '<path d="M50,50 L50,3 A47,47 0 0,1 97,50 Z" class="shape-path"/>',
+  wave          = '<path d="M2,35 C18,15 32,15 50,35 C68,55 82,55 98,35 L98,65 C82,85 68,85 50,65 C32,45 18,45 2,65 Z" class="shape-path"/>',
+  arc           = '<path d="M50,5 A45,45 0 0,0 50,95 L50,70 A20,20 0 0,1 50,30 Z" class="shape-path"/>',
+  ["no-symbol"] = '<path fill-rule="evenodd" d="M50,3 A47,47 0 1,0 50,97 A47,47 0 1,0 50,3 M14,22 L22,14 L86,78 L78,86 Z" class="shape-path"/>',
+  -- Banners
+  ribbon        = '<polygon points="2,20 85,20 98,50 85,80 2,80 15,50" class="shape-path"/>',
+  -- Functional arrows
   arrow         = '<polygon points="2,30 65,30 65,10 98,50 65,90 65,70 2,70" class="shape-path"/>',
   chevron       = '<polygon points="2,2 65,2 98,50 65,98 2,98 35,50" class="shape-path"/>',
   cross         = '<polygon points="35,2 65,2 65,35 98,35 98,65 65,65 65,98 35,98 35,65 2,65 2,35 35,35" class="shape-path"/>',

@@ -69,7 +69,7 @@ end
 
 function Div(el)
   if not quarto.doc.is_format("html:js") then
-    return pandoc.Null()
+    return el.content
   end
 
   local shape = get_shape_name(el.classes)

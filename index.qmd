@@ -32,12 +32,23 @@ Hello
 :::
 ```
 
+## Typst / PDF output
+
+Shapes also render in Quarto's `typst` format (PDF).
+The existing SVG definitions are embedded as Typst images, so every shape is available.
+Note these print-specific behaviors.
+
+- Size classes map to print lengths: `.shape-sm` 3cm, `.shape-md` 5cm, `.shape-lg` 8cm.
+- Content is centered within the shape's bounding box, not its visual outline.
+
 ## Examples
 
 ### Basic Usage
 
-[View Example](examples/basic.html){.btn .btn-primary}
-[Source Code](https://github.com/emilhvitfeldt/quarto-shapes/blob/main/examples/basic.qmd){.btn .btn-secondary}
+- [View HTML Example](examples/basic.html){.btn .btn-primary}
+- [View PDF (Typst) Example](examples/basic.pdf){.btn .btn-primary}
+- [Source Code](https://github.com/emilhvitfeldt/quarto-shapes/blob/main/examples/basic.qmd){.btn .btn-secondary}
 
-<iframe src="examples/basic.html" width="100%" height="400"
-  style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+![](examples/basic.html){width="100%" height="400" style="border: 1px solid #ccc; border-radius: 4px;"}
+
+![](examples/basic.pdf){width="100%" height="400" style="border: 1px solid #ccc; border-radius: 4px;"}

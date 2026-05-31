@@ -1,6 +1,6 @@
 # quarto-shapes
 
-CSS shape classes for Quarto — style divs as shapes (circles, hexagons, stars, etc.) that can contain text and other elements. Supports fill, stroke, rotation, and sizing modifier classes. Works across **HTML** and **RevealJS** output.
+CSS shape classes for Quarto — style divs as shapes (circles, hexagons, stars, etc.) that can contain text and other elements. Supports fill, stroke, rotation, and sizing modifier classes. Works across **HTML**, **RevealJS**, and **Typst** (PDF) output.
 
 📖 **[Documentation site](https://emilhvitfeldt.github.io/quarto-shapes/)**
 
@@ -49,6 +49,7 @@ Hello
 |----------|-------|
 | HTML     | ✅    |
 | RevealJS | ✅    |
+| Typst    | ✅ SVG embedded as image; size classes map to print lengths (sm 3cm / md 5cm / lg 8cm). |
 
 ## License
 

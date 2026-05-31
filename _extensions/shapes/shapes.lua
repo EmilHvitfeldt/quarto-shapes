@@ -67,14 +67,7 @@ local function get_shape_name(classes)
   end
 end
 
-function Div(el)
-  if not quarto.doc.is_format("html:js") then
-    return el.content
-  end
-
-  local shape = get_shape_name(el.classes)
-  if not shape then return end
-
+local function render_html(el, shape)
   quarto.doc.add_html_dependency({
     name = "shapes",
     version = "0.1.0",
@@ -96,4 +89,82 @@ function Div(el)
   blocks:extend(el.content)
   blocks:insert(close)
   return blocks
+end
+
+-- Typst output: shapes.css does not apply, so modifier classes are parsed here
+-- and baked directly into a standalone SVG embedded as a Typst image.
+local COLORS = {
+  red = "#e74c3c", blue = "#3498db", green = "#2ecc71", yellow = "#f1c40f",
+  purple = "#9b59b6", orange = "#e67e22", white = "#ffffff", black = "#111111",
+  none = "none",
+}
+local SIZES = { sm = "3cm", md = "5cm", lg = "8cm", full = "100%" }
+local STROKE_W = { sm = 1, md = 3, lg = 6, xl = 10 }
+
+local function parse_typst_modifiers(classes)
+  local m = { fill = "#111111", stroke = "none", width = 3, size = "5cm", rotate = 0, center = false }
+  for _, cls in ipairs(classes) do
+    local size = cls:match("^shape%-(sm)$") or cls:match("^shape%-(md)$")
+      or cls:match("^shape%-(lg)$") or cls:match("^shape%-(full)$")
+    if size and SIZES[size] then m.size = SIZES[size] end
+
+    local fill = cls:match("^shape%-fill%-(%a+)$")
+    if fill and COLORS[fill] then m.fill = COLORS[fill] end
+
+    local sw = cls:match("^shape%-stroke%-(%a+)$")
+    if sw then
+      if COLORS[sw] then m.stroke = COLORS[sw] end
+      if STROKE_W[sw] then m.width = STROKE_W[sw] end
+    end
+
+    local rot = cls:match("^shape%-rotate%-(%d+)$")
+    if rot then m.rotate = tonumber(rot) end
+
+    if cls == "shape-center" then m.center = true end
+  end
+  return m
+end
+
+local function render_typst(el, shape)
+  local m = parse_typst_modifiers(el.classes)
+
+  local elem = shapes[shape]:gsub('"', "'")
+  elem = elem:gsub("class='shape%-path'", string.format(
+    "fill='%s' stroke='%s' stroke-width='%s'", m.fill, m.stroke, m.width))
+  local svg = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"
+    .. elem .. "</svg>"
+
+  local image = string.format(
+    'image(bytes("%s"), format: "svg", width: %s, height: %s)', svg, m.size, m.size)
+  local align = m.center and "center" or "left"
+
+  if #el.content == 0 then
+    return pandoc.RawBlock("typst", string.format(
+      "#align(%s)[#rotate(%ddeg, %s)]", align, m.rotate, image))
+  end
+
+  -- Wrap el.content as Typst blocks so Quarto processes shortcodes/crossrefs.
+  local open = pandoc.RawBlock("typst", string.format(
+    "#align(%s)[#rotate(%ddeg, box(width: %s, height: %s)[\n"
+    .. "  #place(center + horizon, %s)\n"
+    .. "  #place(center + horizon)[",
+    align, m.rotate, m.size, m.size, image))
+  local close = pandoc.RawBlock("typst", "]])]")
+
+  local blocks = pandoc.Blocks({ open })
+  blocks:extend(el.content)
+  blocks:insert(close)
+  return blocks
+end
+
+function Div(el)
+  local shape = get_shape_name(el.classes)
+  if not shape then return end
+  if quarto.doc.is_format("typst") then
+    return render_typst(el, shape)
+  end
+  if quarto.doc.is_format("html:js") then
+    return render_html(el, shape)
+  end
+  return el.content
 end

@@ -1,6 +1,8 @@
 ---
 title: "Basic Usage"
-format: html
+format:
+  html: default
+  typst: default
 filters:
   - ../_extensions/shapes/shapes.lua
 ---
@@ -8,6 +10,7 @@ filters:
 ## Basic Geometric
 
 ::: {.shape-circle .shape-fill-blue .shape-lg}
+{{< meta title >}}
 :::
 
 ::: {.shape-square .shape-fill-green .shape-lg}

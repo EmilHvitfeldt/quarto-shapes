@@ -4,84 +4,84 @@
     "href": "examples/basic.html#polygons",
     "title": "Basic Usage",
     "section": "Polygons",
-    "text": "Polygons"
+    "text": "Polygons\nStraight-edged shapes, including regular n-gons from triangle through dodecagon."
   },
   {
     "objectID": "examples/basic.html#stars",
     "href": "examples/basic.html#stars",
     "title": "Basic Usage",
     "section": "Stars",
-    "text": "Stars"
+    "text": "Stars\nPointed star shapes with varying point counts, plus sun and starburst variants."
   },
   {
     "objectID": "examples/basic.html#nature-symbols",
     "href": "examples/basic.html#nature-symbols",
     "title": "Basic Usage",
     "section": "Nature & Symbols",
-    "text": "Nature & Symbols"
+    "text": "Nature & Symbols\nRecognizable real-world and iconographic shapes like hearts, clouds, and weather."
   },
   {
     "objectID": "examples/basic.html#arrows",
     "href": "examples/basic.html#arrows",
     "title": "Basic Usage",
     "section": "Arrows",
-    "text": "Arrows"
+    "text": "Arrows\nDirectional shapes for indicating flow, movement, or sequence."
   },
   {
     "objectID": "examples/basic.html#callouts-bubbles",
     "href": "examples/basic.html#callouts-bubbles",
     "title": "Basic Usage",
     "section": "Callouts & Bubbles",
-    "text": "Callouts & Bubbles\nHello!\nHi!"
+    "text": "Callouts & Bubbles\nSpeech and thought bubbles for annotating or quoting — these are designed to hold text.\n\nHello!\n\n\nHi!\n\n\nHey!\n\n\nYo!\n\n\nHmm…\n\n\nPoof\n\n\nBoom!"
   },
   {
     "objectID": "examples/basic.html#flowchart",
     "href": "examples/basic.html#flowchart",
     "title": "Basic Usage",
     "section": "Flowchart",
-    "text": "Flowchart"
+    "text": "Flowchart\nStandard flowchart and diagram symbols (process, data, decision, etc.)."
   },
   {
     "objectID": "examples/basic.html#block-functional",
     "href": "examples/basic.html#block-functional",
     "title": "Basic Usage",
     "section": "Block & Functional",
-    "text": "Block & Functional"
+    "text": "Block & Functional\nDecorative and utility shapes such as crosses, shields, scrolls, and banners."
   },
   {
     "objectID": "examples/basic.html#d-perspective",
     "href": "examples/basic.html#d-perspective",
     "title": "Basic Usage",
     "section": "3D / Perspective",
-    "text": "3D / Perspective"
+    "text": "3D / Perspective\nShapes drawn with depth to suggest three-dimensional objects."
   },
   {
     "objectID": "examples/basic.html#math-symbols",
     "href": "examples/basic.html#math-symbols",
     "title": "Basic Usage",
     "section": "Math Symbols",
-    "text": "Math Symbols"
+    "text": "Math Symbols\nOperators and mathematical signs rendered as filled shapes."
   },
   {
     "objectID": "examples/basic.html#brackets-braces",
     "href": "examples/basic.html#brackets-braces",
     "title": "Basic Usage",
     "section": "Brackets & Braces",
-    "text": "Brackets & Braces"
+    "text": "Brackets & Braces\nGrouping marks — square brackets, curly braces, and parentheses, in left/right pairs."
   },
   {
     "objectID": "examples/basic.html#fill-stroke",
     "href": "examples/basic.html#fill-stroke",
     "title": "Basic Usage",
     "section": "Fill & Stroke",
-    "text": "Fill & Stroke"
+    "text": "Fill & Stroke\nThese are not separate shapes — they show modifier classes (.shape-fill-*, .shape-stroke-*) applied to any shape above."
   },
   {
     "objectID": "examples/basic.html#rotation",
     "href": "examples/basic.html#rotation",
     "title": "Basic Usage",
     "section": "Rotation",
-    "text": "Rotation"
+    "text": "Rotation\nAlso a modifier, not a shape group — the .shape-rotate-* classes turn any shape in 45° steps."
   },
   {
     "objectID": "index.html",
@@ -109,7 +109,7 @@
     "href": "index.html#examples",
     "title": "quarto-shapes",
     "section": "Examples",
-    "text": "Examples\n\nBasic Usage\nView Example Source Code"
+    "text": "Examples\n\nBasic Usage\n\nView HTML Example\nView PDF (Typst) Example\nSource Code"
   },
   {
     "objectID": "examples/basic.html#symbols-nature",
@@ -124,5 +124,33 @@
     "title": "Basic Usage",
     "section": "Functional & Flowchart",
     "text": "Functional & Flowchart"
+  },
+  {
+    "objectID": "examples/basic.html",
+    "href": "examples/basic.html",
+    "title": "Basic Usage",
+    "section": "",
+    "text": "Everyday primitives — circles, squares, and simple curved or cut-out variations.\n\nBasic Usage"
+  },
+  {
+    "objectID": "examples/basic.html#basic-geometric",
+    "href": "examples/basic.html#basic-geometric",
+    "title": "Basic Usage",
+    "section": "",
+    "text": "Everyday primitives — circles, squares, and simple curved or cut-out variations.\n\nBasic Usage"
+  },
+  {
+    "objectID": "index.html#typst-pdf-output",
+    "href": "index.html#typst-pdf-output",
+    "title": "quarto-shapes",
+    "section": "Typst / PDF output",
+    "text": "Typst / PDF output\nShapes also render in Quarto’s typst format (PDF). The existing SVG definitions are embedded as Typst images, so every shape is available. Note these print-specific behaviors.\n\nSize classes map to print lengths: .shape-sm 3cm, .shape-md 5cm, .shape-lg 8cm.\nContent is centered within the shape’s bounding box, not its visual outline."
+  },
+  {
+    "objectID": "index.html#modifier-classes",
+    "href": "index.html#modifier-classes",
+    "title": "quarto-shapes",
+    "section": "Modifier classes",
+    "text": "Modifier classes\nEvery shape accepts modifier classes. They are fully composable — stack any combination on a single div, in any order:\n::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-rotate-90 .shape-md}\n:::\n\nFill — .shape-fill-*\nSets the interior color. Use .shape-fill-none for an outline-only shape (pair it with a stroke).\n\n\n\n\n\n\n\nClass\nResult\n\n\n\n\n.shape-fill-blue .shape-fill-green .shape-fill-red .shape-fill-orange .shape-fill-purple .shape-fill-yellow\nNamed colors\n\n\n.shape-fill-black .shape-fill-white\nNeutrals\n\n\n.shape-fill-none\nTransparent interior\n\n\n\n\n\nStroke — .shape-stroke-*\nTwo independent axes: outline color and outline width. Combine one of each.\n\n\n\n\n\n\n\n\nColor\nWidth\nDefault width\n\n\n\n\n.shape-stroke-{blue,green,red,orange,purple,yellow,black,white}, or .shape-stroke-none\n.shape-stroke-sm (1) · .shape-stroke-md (3) · .shape-stroke-lg (6) · .shape-stroke-xl (10)\n3 when a stroke color is set without a width class\n\n\n\n\n\nSize — .shape-{sm,md,lg,full}\nSets the shape’s bounding box. Defaults to 8rem (same as .shape-md) when no size class is given.\n\n\n\nClass\nHTML size\nTypst (print)\n\n\n\n\n.shape-sm\n4rem\n3cm\n\n\n.shape-md\n8rem\n5cm\n\n\n.shape-lg\n14rem\n8cm\n\n\n.shape-full\n100% of container\n—\n\n\n\n\n\nRotation — .shape-rotate-*\nRotates the shape clockwise in 45° steps: .shape-rotate-45, .shape-rotate-90, .shape-rotate-135, .shape-rotate-180, .shape-rotate-225, .shape-rotate-270, .shape-rotate-315.\nSee the HTML example for these modifiers applied across the full shape catalog."
   }
 ]

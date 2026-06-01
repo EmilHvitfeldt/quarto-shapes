@@ -32,6 +32,50 @@ Hello
 :::
 ```
 
+## Modifier classes
+
+Every shape accepts modifier classes. They are fully composable — stack any combination on a single div, in any order:
+
+```markdown
+::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-rotate-90 .shape-md}
+:::
+```
+
+### Fill — `.shape-fill-*`
+
+Sets the interior color. Use `.shape-fill-none` for an outline-only shape (pair it with a stroke).
+
+| Class | Result |
+|-------|--------|
+| `.shape-fill-blue` `.shape-fill-green` `.shape-fill-red` `.shape-fill-orange` `.shape-fill-purple` `.shape-fill-yellow` | Named colors |
+| `.shape-fill-black` `.shape-fill-white` | Neutrals |
+| `.shape-fill-none` | Transparent interior |
+
+### Stroke — `.shape-stroke-*`
+
+Two independent axes: outline **color** and outline **width**. Combine one of each.
+
+| Color | Width | Default width |
+|-------|-------|---------------|
+| `.shape-stroke-{blue,green,red,orange,purple,yellow,black,white}`, or `.shape-stroke-none` | `.shape-stroke-sm` (1) · `.shape-stroke-md` (3) · `.shape-stroke-lg` (6) · `.shape-stroke-xl` (10) | `3` when a stroke color is set without a width class |
+
+### Size — `.shape-{sm,md,lg,full}`
+
+Sets the shape's bounding box. Defaults to `8rem` (same as `.shape-md`) when no size class is given.
+
+| Class | HTML size | Typst (print) |
+|-------|-----------|---------------|
+| `.shape-sm` | `4rem` | `3cm` |
+| `.shape-md` | `8rem` | `5cm` |
+| `.shape-lg` | `14rem` | `8cm` |
+| `.shape-full` | `100%` of container | — |
+
+### Rotation — `.shape-rotate-*`
+
+Rotates the shape clockwise in 45° steps: `.shape-rotate-45`, `.shape-rotate-90`, `.shape-rotate-135`, `.shape-rotate-180`, `.shape-rotate-225`, `.shape-rotate-270`, `.shape-rotate-315`.
+
+See the [HTML example](examples/basic.html) for these modifiers applied across the full shape catalog.
+
 ## Typst / PDF output
 
 Shapes also render in Quarto's `typst` format (PDF).

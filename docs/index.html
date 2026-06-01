@@ -159,6 +159,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#quick-start" id="toc-quick-start" class="nav-link" data-scroll-target="#quick-start">Quick Start</a></li>
+  <li><a href="#modifier-classes" id="toc-modifier-classes" class="nav-link" data-scroll-target="#modifier-classes">Modifier classes</a>
+  <ul class="collapse">
+  <li><a href="#fill-.shape-fill-" id="toc-fill-.shape-fill-" class="nav-link" data-scroll-target="#fill-.shape-fill-">Fill — <code>.shape-fill-*</code></a></li>
+  <li><a href="#stroke-.shape-stroke-" id="toc-stroke-.shape-stroke-" class="nav-link" data-scroll-target="#stroke-.shape-stroke-">Stroke — <code>.shape-stroke-*</code></a></li>
+  <li><a href="#size-.shape-smmdlgfull" id="toc-size-.shape-smmdlgfull" class="nav-link" data-scroll-target="#size-.shape-smmdlgfull">Size — <code>.shape-{sm,md,lg,full}</code></a></li>
+  <li><a href="#rotation-.shape-rotate-" id="toc-rotation-.shape-rotate-" class="nav-link" data-scroll-target="#rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></a></li>
+  </ul></li>
+  <li><a href="#typst-pdf-output" id="toc-typst-pdf-output" class="nav-link" data-scroll-target="#typst-pdf-output">Typst / PDF output</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
   <ul class="collapse">
   <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic Usage</a></li>
@@ -208,13 +216,126 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Hello</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="modifier-classes" class="level2">
+<h2 class="anchored" data-anchor-id="modifier-classes">Modifier classes</h2>
+<p>Every shape accepts modifier classes. They are fully composable — stack any combination on a single div, in any order:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-rotate-90 .shape-md}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="fill-.shape-fill-" class="level3">
+<h3 class="anchored" data-anchor-id="fill-.shape-fill-">Fill — <code>.shape-fill-*</code></h3>
+<p>Sets the interior color. Use <code>.shape-fill-none</code> for an outline-only shape (pair it with a stroke).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.shape-fill-blue</code> <code>.shape-fill-green</code> <code>.shape-fill-red</code> <code>.shape-fill-orange</code> <code>.shape-fill-purple</code> <code>.shape-fill-yellow</code></td>
+<td>Named colors</td>
+</tr>
+<tr class="even">
+<td><code>.shape-fill-black</code> <code>.shape-fill-white</code></td>
+<td>Neutrals</td>
+</tr>
+<tr class="odd">
+<td><code>.shape-fill-none</code></td>
+<td>Transparent interior</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="stroke-.shape-stroke-" class="level3">
+<h3 class="anchored" data-anchor-id="stroke-.shape-stroke-">Stroke — <code>.shape-stroke-*</code></h3>
+<p>Two independent axes: outline <strong>color</strong> and outline <strong>width</strong>. Combine one of each.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Color</th>
+<th>Width</th>
+<th>Default width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.shape-stroke-{blue,green,red,orange,purple,yellow,black,white}</code>, or <code>.shape-stroke-none</code></td>
+<td><code>.shape-stroke-sm</code> (1) · <code>.shape-stroke-md</code> (3) · <code>.shape-stroke-lg</code> (6) · <code>.shape-stroke-xl</code> (10)</td>
+<td><code>3</code> when a stroke color is set without a width class</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="size-.shape-smmdlgfull" class="level3">
+<h3 class="anchored" data-anchor-id="size-.shape-smmdlgfull">Size — <code>.shape-{sm,md,lg,full}</code></h3>
+<p>Sets the shape’s bounding box. Defaults to <code>8rem</code> (same as <code>.shape-md</code>) when no size class is given.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>HTML size</th>
+<th>Typst (print)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.shape-sm</code></td>
+<td><code>4rem</code></td>
+<td><code>3cm</code></td>
+</tr>
+<tr class="even">
+<td><code>.shape-md</code></td>
+<td><code>8rem</code></td>
+<td><code>5cm</code></td>
+</tr>
+<tr class="odd">
+<td><code>.shape-lg</code></td>
+<td><code>14rem</code></td>
+<td><code>8cm</code></td>
+</tr>
+<tr class="even">
+<td><code>.shape-full</code></td>
+<td><code>100%</code> of container</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rotation-.shape-rotate-" class="level3">
+<h3 class="anchored" data-anchor-id="rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></h3>
+<p>Rotates the shape clockwise in 45° steps: <code>.shape-rotate-45</code>, <code>.shape-rotate-90</code>, <code>.shape-rotate-135</code>, <code>.shape-rotate-180</code>, <code>.shape-rotate-225</code>, <code>.shape-rotate-270</code>, <code>.shape-rotate-315</code>.</p>
+<p>See the <a href="examples/basic.html">HTML example</a> for these modifiers applied across the full shape catalog.</p>
+</section>
+</section>
+<section id="typst-pdf-output" class="level2">
+<h2 class="anchored" data-anchor-id="typst-pdf-output">Typst / PDF output</h2>
+<p>Shapes also render in Quarto’s <code>typst</code> format (PDF). The existing SVG definitions are embedded as Typst images, so every shape is available. Note these print-specific behaviors.</p>
+<ul>
+<li>Size classes map to print lengths: <code>.shape-sm</code> 3cm, <code>.shape-md</code> 5cm, <code>.shape-lg</code> 8cm.</li>
+<li>Content is centered within the shape’s bounding box, not its visual outline.</li>
+</ul>
+</section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <section id="basic-usage" class="level3">
 <h3 class="anchored" data-anchor-id="basic-usage">Basic Usage</h3>
-<p><a href="examples/basic.html" class="btn btn-primary">View Example</a> <a href="https://github.com/emilhvitfeldt/quarto-shapes/blob/main/examples/basic.qmd" class="btn btn-secondary">Source Code</a></p>
-<iframe src="examples/basic.html" width="100%" height="400" style="border: 1px solid #ccc; border-radius: 4px;">
-</iframe>
+<ul>
+<li><a href="examples/basic.html" class="btn btn-primary">View HTML Example</a></li>
+<li><a href="examples/basic.pdf" class="btn btn-primary">View PDF (Typst) Example</a></li>
+<li><a href="https://github.com/emilhvitfeldt/quarto-shapes/blob/main/examples/basic.qmd" class="btn btn-secondary">Source Code</a></li>
+</ul>
+<p><embed src="examples/basic.html" style="border: 1px solid #ccc; border-radius: 4px;;width:100.0%" height="400"></p>
+<p><embed src="examples/basic.pdf" style="border: 1px solid #ccc; border-radius: 4px;;width:100.0%" height="400"></p>
 
 
 </section>

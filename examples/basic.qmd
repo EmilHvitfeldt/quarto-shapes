@@ -12,126 +12,114 @@ filters:
 ::: {.shape-circle .shape-fill-blue .shape-lg}
 {{< meta title >}}
 :::
-
 ::: {.shape-square .shape-fill-green .shape-lg}
 :::
-
 ::: {.shape-rectangle .shape-fill-red .shape-lg}
 :::
-
 ::: {.shape-rounded-square .shape-fill-purple .shape-lg}
 :::
-
-::: {.shape-triangle .shape-fill-orange .shape-lg}
+::: {.shape-oval .shape-fill-orange .shape-lg}
 :::
-
-::: {.shape-diamond .shape-fill-blue .shape-lg}
+::: {.shape-semicircle .shape-fill-blue .shape-lg}
 :::
-
-::: {.shape-oval .shape-fill-green .shape-lg}
-:::
-
-::: {.shape-parallelogram .shape-fill-red .shape-lg}
-:::
-
-::: {.shape-trapezoid .shape-fill-purple .shape-lg}
-:::
-
-::: {.shape-semicircle .shape-fill-orange .shape-lg}
-:::
-
-::: {.shape-arc .shape-fill-blue .shape-lg}
-:::
-
 ::: {.shape-pie .shape-fill-green .shape-lg}
+:::
+::: {.shape-arc .shape-fill-red .shape-lg}
+:::
+::: {.shape-block-arc .shape-fill-purple .shape-lg}
+:::
+::: {.shape-donut .shape-fill-orange .shape-lg}
+:::
+::: {.shape-frame .shape-fill-blue .shape-lg}
 :::
 
 ## Polygons
 
-::: {.shape-pentagon .shape-fill-red .shape-lg}
+::: {.shape-triangle .shape-fill-red .shape-lg}
 :::
-
+::: {.shape-diamond .shape-fill-blue .shape-lg}
+:::
+::: {.shape-pentagon .shape-fill-green .shape-lg}
+:::
 ::: {.shape-hexagon .shape-fill-purple .shape-lg}
 :::
-
 ::: {.shape-heptagon .shape-fill-orange .shape-lg}
 :::
-
-::: {.shape-octagon .shape-fill-blue .shape-lg}
+::: {.shape-octagon .shape-fill-red .shape-lg}
 :::
-
-::: {.shape-decagon .shape-fill-green .shape-lg}
+::: {.shape-decagon .shape-fill-blue .shape-lg}
 :::
-
-::: {.shape-dodecagon .shape-fill-red .shape-lg}
+::: {.shape-dodecagon .shape-fill-green .shape-lg}
+:::
+::: {.shape-parallelogram .shape-fill-purple .shape-lg}
+:::
+::: {.shape-trapezoid .shape-fill-orange .shape-lg}
 :::
 
 ## Stars
 
 ::: {.shape-star-4 .shape-fill-yellow .shape-lg}
 :::
-
 ::: {.shape-star .shape-fill-yellow .shape-lg}
 :::
-
 ::: {.shape-star-6 .shape-fill-yellow .shape-lg}
 :::
-
 ::: {.shape-star-8 .shape-fill-yellow .shape-lg}
 :::
-
 ::: {.shape-star-10 .shape-fill-yellow .shape-lg}
 :::
-
 ::: {.shape-star-12 .shape-fill-yellow .shape-lg}
 :::
-
+::: {.shape-star-16 .shape-fill-yellow .shape-lg}
+:::
+::: {.shape-star-24 .shape-fill-yellow .shape-lg}
+:::
+::: {.shape-star-32 .shape-fill-yellow .shape-lg}
+:::
+::: {.shape-sun .shape-fill-yellow .shape-lg}
+:::
 ::: {.shape-starburst .shape-fill-yellow .shape-lg}
 :::
 
-::: {.shape-sun .shape-fill-yellow .shape-lg}
-:::
-
-## Symbols & Nature
+## Nature & Symbols
 
 ::: {.shape-heart .shape-fill-red .shape-lg}
 :::
-
 ::: {.shape-moon .shape-fill-blue .shape-lg}
 :::
-
 ::: {.shape-cloud .shape-fill-white .shape-stroke-blue .shape-stroke-md .shape-lg}
 :::
-
 ::: {.shape-lightning .shape-fill-yellow .shape-lg}
 :::
-
 ::: {.shape-teardrop .shape-fill-blue .shape-lg}
 :::
-
-::: {.shape-donut .shape-fill-orange .shape-lg}
-:::
-
 ::: {.shape-wave .shape-fill-blue .shape-lg}
 :::
-
+::: {.shape-double-wave .shape-fill-green .shape-lg}
+:::
 ::: {.shape-no-symbol .shape-fill-red .shape-lg}
+:::
+::: {.shape-smiley .shape-fill-yellow .shape-lg}
 :::
 
 ## Arrows
 
 ::: {.shape-arrow .shape-fill-blue .shape-lg}
 :::
-
 ::: {.shape-arrow-double .shape-fill-green .shape-lg}
 :::
-
 ::: {.shape-notched-arrow .shape-fill-red .shape-lg}
 :::
-
 ::: {.shape-pentagon-arrow .shape-fill-purple .shape-lg}
 :::
-
+::: {.shape-arrow-striped .shape-fill-blue .shape-lg}
+:::
+::: {.shape-arrow-bent .shape-fill-green .shape-lg}
+:::
+::: {.shape-arrow-uturn .shape-fill-red .shape-lg}
+:::
+::: {.shape-arrow-circular .shape-fill-purple .shape-lg}
+:::
 ::: {.shape-chevron .shape-fill-orange .shape-lg}
 :::
 
@@ -140,55 +128,118 @@ filters:
 ::: {.shape-speech-bubble .shape-fill-blue .shape-lg}
 Hello!
 :::
-
 ::: {.shape-callout-round .shape-fill-green .shape-lg}
 Hi!
 :::
-
-## Functional & Flowchart
-
-::: {.shape-shield .shape-fill-purple .shape-lg}
+::: {.shape-callout-rounded .shape-fill-red .shape-lg}
+Hey!
+:::
+::: {.shape-callout-oval .shape-fill-purple .shape-lg}
+Yo!
+:::
+::: {.shape-callout-thought .shape-fill-blue .shape-lg}
+Hmm...
+:::
+::: {.shape-callout-cloud .shape-fill-white .shape-stroke-blue .shape-stroke-md .shape-lg}
+Poof
+:::
+::: {.shape-callout-explosion .shape-fill-yellow .shape-lg}
+Boom!
 :::
 
-::: {.shape-cross .shape-fill-red .shape-lg}
-:::
+## Flowchart
 
 ::: {.shape-terminator .shape-fill-blue .shape-lg}
 :::
-
 ::: {.shape-cylinder .shape-fill-green .shape-lg}
 :::
-
-::: {.shape-document .shape-fill-orange .shape-lg}
+::: {.shape-document .shape-fill-red .shape-lg}
 :::
-
 ::: {.shape-manual-input .shape-fill-purple .shape-lg}
 :::
-
-::: {.shape-delay .shape-fill-blue .shape-lg}
+::: {.shape-delay .shape-fill-orange .shape-lg}
+:::
+::: {.shape-display .shape-fill-blue .shape-lg}
+:::
+::: {.shape-stored-data .shape-fill-green .shape-lg}
+:::
+::: {.shape-summing-junction .shape-fill-red .shape-lg}
+:::
+::: {.shape-off-page .shape-fill-purple .shape-lg}
 :::
 
+## Block & Functional
+
+::: {.shape-cross .shape-fill-red .shape-lg}
+:::
+::: {.shape-shield .shape-fill-purple .shape-lg}
+:::
+::: {.shape-folded-corner .shape-fill-orange .shape-stroke-black .shape-stroke-sm .shape-lg}
+:::
+::: {.shape-diagonal-stripe .shape-fill-blue .shape-lg}
+:::
+::: {.shape-scroll .shape-fill-orange .shape-lg}
+:::
+::: {.shape-wavy-flag .shape-fill-green .shape-lg}
+:::
 ::: {.shape-ribbon .shape-fill-red .shape-lg}
+:::
+
+## 3D / Perspective
+
+::: {.shape-cube .shape-fill-blue .shape-stroke-black .shape-stroke-sm .shape-lg}
+:::
+::: {.shape-cylinder-3d .shape-fill-green .shape-stroke-black .shape-stroke-sm .shape-lg}
+:::
+::: {.shape-cone .shape-fill-red .shape-lg}
+:::
+::: {.shape-pyramid .shape-fill-purple .shape-stroke-black .shape-stroke-sm .shape-lg}
+:::
+
+## Math Symbols
+
+::: {.shape-minus .shape-fill-black .shape-lg}
+:::
+::: {.shape-cross .shape-fill-black .shape-lg}
+:::
+::: {.shape-multiply .shape-fill-black .shape-lg}
+:::
+::: {.shape-divide .shape-fill-black .shape-lg}
+:::
+::: {.shape-equals .shape-fill-black .shape-lg}
+:::
+::: {.shape-not-equal .shape-fill-black .shape-lg}
+:::
+
+## Brackets & Braces
+
+::: {.shape-bracket-left .shape-fill-black .shape-lg}
+:::
+::: {.shape-bracket-right .shape-fill-black .shape-lg}
+:::
+::: {.shape-brace-left .shape-fill-black .shape-lg}
+:::
+::: {.shape-brace-right .shape-fill-black .shape-lg}
+:::
+::: {.shape-paren-left .shape-fill-black .shape-lg}
+:::
+::: {.shape-paren-right .shape-fill-black .shape-lg}
 :::
 
 ## Fill & Stroke
 
 ::: {.shape-circle .shape-fill-none .shape-stroke-blue .shape-stroke-lg .shape-lg}
 :::
-
 ::: {.shape-star .shape-fill-red .shape-stroke-black .shape-stroke-md .shape-lg}
 :::
-
-::: {.shape-no-symbol .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-lg}
+::: {.shape-cube .shape-fill-blue .shape-stroke-black .shape-stroke-md .shape-lg}
 :::
 
 ## Rotation
 
 ::: {.shape-triangle .shape-fill-purple .shape-rotate-180 .shape-lg}
 :::
-
 ::: {.shape-arrow .shape-fill-blue .shape-rotate-90 .shape-lg}
 :::
-
-::: {.shape-moon .shape-fill-yellow .shape-rotate-90 .shape-lg}
+::: {.shape-moon .shape-fill-yellow .shape-rotate-270 .shape-lg}
 :::

@@ -14,11 +14,11 @@
     "text": "Stars"
   },
   {
-    "objectID": "examples/basic.html#symbols-nature",
-    "href": "examples/basic.html#symbols-nature",
+    "objectID": "examples/basic.html#nature-symbols",
+    "href": "examples/basic.html#nature-symbols",
     "title": "Basic Usage",
-    "section": "Symbols & Nature",
-    "text": "Symbols & Nature"
+    "section": "Nature & Symbols",
+    "text": "Nature & Symbols"
   },
   {
     "objectID": "examples/basic.html#arrows",
@@ -35,11 +35,39 @@
     "text": "Callouts & Bubbles\nHello!\nHi!"
   },
   {
-    "objectID": "examples/basic.html#functional-flowchart",
-    "href": "examples/basic.html#functional-flowchart",
+    "objectID": "examples/basic.html#flowchart",
+    "href": "examples/basic.html#flowchart",
     "title": "Basic Usage",
-    "section": "Functional & Flowchart",
-    "text": "Functional & Flowchart"
+    "section": "Flowchart",
+    "text": "Flowchart"
+  },
+  {
+    "objectID": "examples/basic.html#block-functional",
+    "href": "examples/basic.html#block-functional",
+    "title": "Basic Usage",
+    "section": "Block & Functional",
+    "text": "Block & Functional"
+  },
+  {
+    "objectID": "examples/basic.html#d-perspective",
+    "href": "examples/basic.html#d-perspective",
+    "title": "Basic Usage",
+    "section": "3D / Perspective",
+    "text": "3D / Perspective"
+  },
+  {
+    "objectID": "examples/basic.html#math-symbols",
+    "href": "examples/basic.html#math-symbols",
+    "title": "Basic Usage",
+    "section": "Math Symbols",
+    "text": "Math Symbols"
+  },
+  {
+    "objectID": "examples/basic.html#brackets-braces",
+    "href": "examples/basic.html#brackets-braces",
+    "title": "Basic Usage",
+    "section": "Brackets & Braces",
+    "text": "Brackets & Braces"
   },
   {
     "objectID": "examples/basic.html#fill-stroke",
@@ -82,5 +110,19 @@
     "title": "quarto-shapes",
     "section": "Examples",
     "text": "Examples\n\nBasic Usage\nView Example Source Code"
+  },
+  {
+    "objectID": "examples/basic.html#symbols-nature",
+    "href": "examples/basic.html#symbols-nature",
+    "title": "Basic Usage",
+    "section": "Symbols & Nature",
+    "text": "Symbols & Nature"
+  },
+  {
+    "objectID": "examples/basic.html#functional-flowchart",
+    "href": "examples/basic.html#functional-flowchart",
+    "title": "Basic Usage",
+    "section": "Functional & Flowchart",
+    "text": "Functional & Flowchart"
   }
 ]

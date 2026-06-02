@@ -159,11 +159,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#quick-start" id="toc-quick-start" class="nav-link" data-scroll-target="#quick-start">Quick Start</a></li>
+  <li><a href="#shape-classes" id="toc-shape-classes" class="nav-link" data-scroll-target="#shape-classes">Shape classes</a></li>
   <li><a href="#colors-sizes-and-modifiers" id="toc-colors-sizes-and-modifiers" class="nav-link" data-scroll-target="#colors-sizes-and-modifiers">Colors, sizes, and modifiers</a>
   <ul class="collapse">
   <li><a href="#fill-fill" id="toc-fill-fill" class="nav-link" data-scroll-target="#fill-fill">Fill — <code>fill="…"</code></a></li>
   <li><a href="#stroke-stroke-.shape-stroke-" id="toc-stroke-stroke-.shape-stroke-" class="nav-link" data-scroll-target="#stroke-stroke-.shape-stroke-">Stroke — <code>stroke="…"</code> + <code>.shape-stroke-*</code></a></li>
-  <li><a href="#size-.shape-smmdlgfull" id="toc-size-.shape-smmdlgfull" class="nav-link" data-scroll-target="#size-.shape-smmdlgfull">Size — <code>.shape-{sm,md,lg,full}</code></a></li>
+  <li><a href="#size-.shape-smmdlgfull-or-size" id="toc-size-.shape-smmdlgfull-or-size" class="nav-link" data-scroll-target="#size-.shape-smmdlgfull-or-size">Size — <code>.shape-{sm,md,lg,full}</code> or <code>size="…"</code></a></li>
   <li><a href="#rotation-.shape-rotate-" id="toc-rotation-.shape-rotate-" class="nav-link" data-scroll-target="#rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></a></li>
   </ul></li>
   <li><a href="#typst-pdf-output" id="toc-typst-pdf-output" class="nav-link" data-scroll-target="#typst-pdf-output">Typst / PDF output</a></li>
@@ -216,6 +217,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Hello</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="shape-classes" class="level2">
+<h2 class="anchored" data-anchor-id="shape-classes">Shape classes</h2>
+<p>Every shape is a class of the form <code>.shape-&lt;name&gt;</code>. The full catalog, grouped by category:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Shape classes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Basic geometric</td>
+<td><code>.shape-circle</code>, <code>.shape-square</code>, <code>.shape-rectangle</code>, <code>.shape-rounded-square</code>, <code>.shape-oval</code>, <code>.shape-semicircle</code>, <code>.shape-pie</code>, <code>.shape-wedge</code>, <code>.shape-arc</code>, <code>.shape-block-arc</code>, <code>.shape-donut</code>, <code>.shape-frame</code></td>
+</tr>
+<tr class="even">
+<td>Polygons</td>
+<td><code>.shape-triangle</code>, <code>.shape-diamond</code>, <code>.shape-pentagon</code>, <code>.shape-hexagon</code>, <code>.shape-heptagon</code>, <code>.shape-octagon</code>, <code>.shape-decagon</code>, <code>.shape-dodecagon</code>, <code>.shape-parallelogram</code>, <code>.shape-trapezoid</code></td>
+</tr>
+<tr class="odd">
+<td>Stars</td>
+<td><code>.shape-star-4</code>, <code>.shape-star</code>, <code>.shape-star-6</code>, <code>.shape-star-8</code>, <code>.shape-star-10</code>, <code>.shape-star-12</code>, <code>.shape-star-16</code>, <code>.shape-star-24</code>, <code>.shape-star-32</code>, <code>.shape-sun</code>, <code>.shape-starburst</code></td>
+</tr>
+<tr class="even">
+<td>Nature &amp; symbols</td>
+<td><code>.shape-heart</code>, <code>.shape-moon</code>, <code>.shape-cloud</code>, <code>.shape-lightning</code>, <code>.shape-teardrop</code>, <code>.shape-wave</code>, <code>.shape-double-wave</code>, <code>.shape-no-symbol</code>, <code>.shape-smiley</code></td>
+</tr>
+<tr class="odd">
+<td>Arrows</td>
+<td><code>.shape-arrow</code>, <code>.shape-arrow-double</code>, <code>.shape-notched-arrow</code>, <code>.shape-pentagon-arrow</code>, <code>.shape-arrow-striped</code>, <code>.shape-arrow-bent</code>, <code>.shape-arrow-uturn</code>, <code>.shape-arrow-circular</code>, <code>.shape-chevron</code></td>
+</tr>
+<tr class="even">
+<td>Callouts &amp; bubbles</td>
+<td><code>.shape-speech-bubble</code>, <code>.shape-callout-round</code>, <code>.shape-callout-rounded</code>, <code>.shape-callout-oval</code>, <code>.shape-callout-thought</code>, <code>.shape-callout-cloud</code>, <code>.shape-callout-explosion</code></td>
+</tr>
+<tr class="odd">
+<td>Flowchart</td>
+<td><code>.shape-terminator</code>, <code>.shape-cylinder</code>, <code>.shape-document</code>, <code>.shape-manual-input</code>, <code>.shape-delay</code>, <code>.shape-display</code>, <code>.shape-stored-data</code>, <code>.shape-summing-junction</code>, <code>.shape-off-page</code></td>
+</tr>
+<tr class="even">
+<td>Block &amp; functional</td>
+<td><code>.shape-cross</code>, <code>.shape-shield</code>, <code>.shape-folded-corner</code>, <code>.shape-diagonal-stripe</code>, <code>.shape-scroll</code>, <code>.shape-wavy-flag</code>, <code>.shape-ribbon</code></td>
+</tr>
+<tr class="odd">
+<td>3D / perspective</td>
+<td><code>.shape-cube</code>, <code>.shape-cylinder-3d</code>, <code>.shape-cone</code>, <code>.shape-pyramid</code></td>
+</tr>
+<tr class="even">
+<td>Math symbols</td>
+<td><code>.shape-minus</code>, <code>.shape-multiply</code>, <code>.shape-divide</code>, <code>.shape-equals</code>, <code>.shape-not-equal</code></td>
+</tr>
+<tr class="odd">
+<td>Brackets &amp; braces</td>
+<td><code>.shape-bracket-left</code>, <code>.shape-bracket-right</code>, <code>.shape-brace-left</code>, <code>.shape-brace-right</code>, <code>.shape-paren-left</code>, <code>.shape-paren-right</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="examples/basic.html">HTML example</a> renders every one of these with its class name labeled underneath.</p>
+</section>
 <section id="colors-sizes-and-modifiers" class="level2">
 <h2 class="anchored" data-anchor-id="colors-sizes-and-modifiers">Colors, sizes, and modifiers</h2>
 <p>Colors are set with the <code>fill=</code> and <code>stroke=</code> attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:</p>
@@ -252,8 +316,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="size-.shape-smmdlgfull" class="level3">
-<h3 class="anchored" data-anchor-id="size-.shape-smmdlgfull">Size — <code>.shape-{sm,md,lg,full}</code></h3>
+<section id="size-.shape-smmdlgfull-or-size" class="level3">
+<h3 class="anchored" data-anchor-id="size-.shape-smmdlgfull-or-size">Size — <code>.shape-{sm,md,lg,full}</code> or <code>size="…"</code></h3>
 <p>Sets the shape’s bounding box. Defaults to <code>8rem</code> (same as <code>.shape-md</code>) when no size class is given.</p>
 <table class="caption-top table">
 <thead>
@@ -286,6 +350,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<p>For a custom size, use the <code>size=</code> attribute with any length. It overrides the size classes and works in both HTML and Typst.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-circle fill="#3498db" size="3cm"}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The value is passed through to both outputs as-is, so for documents you render to <em>both</em> HTML and Typst use a unit valid in each (<code>cm</code>, <code>mm</code>, <code>in</code>, <code>pt</code>). Typst does not accept <code>px</code>.</p>
 </section>
 <section id="rotation-.shape-rotate-" class="level3">
 <h3 class="anchored" data-anchor-id="rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></h3>

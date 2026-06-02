@@ -32,6 +32,26 @@ Hello
 :::
 ```
 
+## Shape classes
+
+Every shape is a class of the form `.shape-<name>`. The full catalog, grouped by category:
+
+| Category | Shape classes |
+|----------|---------------|
+| Basic geometric | `.shape-circle`, `.shape-square`, `.shape-rectangle`, `.shape-rounded-square`, `.shape-oval`, `.shape-semicircle`, `.shape-pie`, `.shape-wedge`, `.shape-arc`, `.shape-block-arc`, `.shape-donut`, `.shape-frame` |
+| Polygons | `.shape-triangle`, `.shape-diamond`, `.shape-pentagon`, `.shape-hexagon`, `.shape-heptagon`, `.shape-octagon`, `.shape-decagon`, `.shape-dodecagon`, `.shape-parallelogram`, `.shape-trapezoid` |
+| Stars | `.shape-star-4`, `.shape-star`, `.shape-star-6`, `.shape-star-8`, `.shape-star-10`, `.shape-star-12`, `.shape-star-16`, `.shape-star-24`, `.shape-star-32`, `.shape-sun`, `.shape-starburst` |
+| Nature & symbols | `.shape-heart`, `.shape-moon`, `.shape-cloud`, `.shape-lightning`, `.shape-teardrop`, `.shape-wave`, `.shape-double-wave`, `.shape-no-symbol`, `.shape-smiley` |
+| Arrows | `.shape-arrow`, `.shape-arrow-double`, `.shape-notched-arrow`, `.shape-pentagon-arrow`, `.shape-arrow-striped`, `.shape-arrow-bent`, `.shape-arrow-uturn`, `.shape-arrow-circular`, `.shape-chevron` |
+| Callouts & bubbles | `.shape-speech-bubble`, `.shape-callout-round`, `.shape-callout-rounded`, `.shape-callout-oval`, `.shape-callout-thought`, `.shape-callout-cloud`, `.shape-callout-explosion` |
+| Flowchart | `.shape-terminator`, `.shape-cylinder`, `.shape-document`, `.shape-manual-input`, `.shape-delay`, `.shape-display`, `.shape-stored-data`, `.shape-summing-junction`, `.shape-off-page` |
+| Block & functional | `.shape-cross`, `.shape-shield`, `.shape-folded-corner`, `.shape-diagonal-stripe`, `.shape-scroll`, `.shape-wavy-flag`, `.shape-ribbon` |
+| 3D / perspective | `.shape-cube`, `.shape-cylinder-3d`, `.shape-cone`, `.shape-pyramid` |
+| Math symbols | `.shape-minus`, `.shape-multiply`, `.shape-divide`, `.shape-equals`, `.shape-not-equal` |
+| Brackets & braces | `.shape-bracket-left`, `.shape-bracket-right`, `.shape-brace-left`, `.shape-brace-right`, `.shape-paren-left`, `.shape-paren-right` |
+
+The [HTML example](examples/basic.html) renders every one of these with its class name labeled underneath.
+
 ## Colors, sizes, and modifiers
 
 Colors are set with the `fill=` and `stroke=` attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:

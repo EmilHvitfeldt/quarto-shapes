@@ -261,6 +261,24 @@ These are not separate shapes — they show the `fill=` and `stroke=` attributes
 ::: {.shape-cube fill="#3498db" stroke="#111111" .shape-stroke-md .shape-md}
 :::
 
+## Sizes
+
+Also a modifier, not a shape group — the `.shape-{sm,md,lg}` classes set the shape's bounding box. `.shape-full` fills its container.
+
+::: {.shape-circle fill="#3498db" .shape-sm}
+:::
+::: {.shape-circle fill="#2ecc71" .shape-md}
+:::
+::: {.shape-circle fill="#e74c3c" .shape-lg}
+:::
+
+For a custom size, use the `size=` attribute with any length — it overrides the size classes.
+
+::: {.shape-circle fill="#9b59b6" size="2cm"}
+:::
+::: {.shape-circle fill="#1abc9c" size="4cm"}
+:::
+
 ## Rotation
 
 Also a modifier, not a shape group — the `.shape-rotate-*` classes turn any shape in 45° steps.

@@ -40,7 +40,7 @@ Hello
 - **Fill color**: `fill="<any CSS color>"` for the interior
 - **Stroke**: `stroke="<any CSS color>"` for outline color and `.shape-stroke-{sm,md,lg,xl}` for width
 - **Rotation classes**: `.shape-rotate-45` through `.shape-rotate-315`
-- **Sizing classes**: `.shape-sm`, `.shape-md`, `.shape-lg`, `.shape-full`
+- **Sizing**: `.shape-sm`, `.shape-md`, `.shape-lg`, `.shape-full`, or `size="<any length>"` for a custom size
 - **Composable**: mix any combination of modifiers
 
 ## Format support

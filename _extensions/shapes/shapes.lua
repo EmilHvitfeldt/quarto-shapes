@@ -168,6 +168,11 @@ local function render_html(el, shape)
   if el.attributes.stroke then
     table.insert(styles, "--shape-stroke:" .. el.attributes.stroke)
   end
+  -- size= accepts any CSS length (e.g. "3cm", "200px") and overrides the
+  -- .shape-{sm,md,lg,full} size classes.
+  if el.attributes.size then
+    table.insert(styles, "--shape-size:" .. el.attributes.size)
+  end
   local style_attr = ""
   if #styles > 0 then
     style_attr = string.format(' style="%s"', table.concat(styles, ";"))
@@ -192,7 +197,8 @@ end
 -- Typst output: shapes.css does not apply, so modifiers are parsed here
 -- and baked directly into a standalone SVG embedded as a Typst image.
 -- Fill and stroke colors come from the fill= / stroke= attributes (any CSS
--- color string); size, stroke width, and rotation still come from classes.
+-- color string) and size from the size= attribute (any length); stroke width
+-- and rotation still come from classes.
 local SIZES = { sm = "3cm", md = "5cm", lg = "8cm", full = "100%" }
 local STROKE_W = { sm = 1, md = 3, lg = 6, xl = 10 }
 
@@ -215,6 +221,8 @@ local function parse_typst_modifiers(el)
 
     if cls == "shape-center" then m.center = true end
   end
+  -- size= accepts any Typst length (e.g. "3cm") and overrides the size class.
+  if el.attributes.size then m.size = el.attributes.size end
   return m
 end
 

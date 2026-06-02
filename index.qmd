@@ -58,7 +58,7 @@ Two independent axes: the outline **color** comes from the `stroke=` attribute (
 |-------|-------|---------------|
 | `stroke="<any CSS color>"`, or `stroke="none"` | `.shape-stroke-sm` (1) · `.shape-stroke-md` (3) · `.shape-stroke-lg` (6) · `.shape-stroke-xl` (10) | `3` when a stroke color is set without a width class |
 
-### Size — `.shape-{sm,md,lg,full}`
+### Size — `.shape-{sm,md,lg,full}` or `size="…"`
 
 Sets the shape's bounding box. Defaults to `8rem` (same as `.shape-md`) when no size class is given.
 
@@ -68,6 +68,15 @@ Sets the shape's bounding box. Defaults to `8rem` (same as `.shape-md`) when no 
 | `.shape-md` | `8rem` | `5cm` |
 | `.shape-lg` | `14rem` | `8cm` |
 | `.shape-full` | `100%` of container | — |
+
+For a custom size, use the `size=` attribute with any length. It overrides the size classes and works in both HTML and Typst.
+
+```markdown
+::: {.shape-circle fill="#3498db" size="3cm"}
+:::
+```
+
+The value is passed through to both outputs as-is, so for documents you render to *both* HTML and Typst use a unit valid in each (`cm`, `mm`, `in`, `pt`). Typst does not accept `px`.
 
 ### Rotation — `.shape-rotate-*`
 

@@ -27,37 +27,36 @@ filters:
 Then wrap any content in a shape div:
 
 ```markdown
-::: {.shape-circle .shape-fill-blue}
+::: {.shape-circle fill="blue"}
 Hello
 :::
 ```
 
-## Modifier classes
+## Colors, sizes, and modifiers
 
-Every shape accepts modifier classes. They are fully composable — stack any combination on a single div, in any order:
+Colors are set with the `fill=` and `stroke=` attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:
 
 ```markdown
-::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-rotate-90 .shape-md}
+::: {.shape-hexagon fill="none" stroke="red" .shape-stroke-lg .shape-rotate-90 .shape-md}
 :::
 ```
 
-### Fill — `.shape-fill-*`
+### Fill — `fill="…"`
 
-Sets the interior color. Use `.shape-fill-none` for an outline-only shape (pair it with a stroke).
+Sets the interior color. Accepts **any CSS color** — a named color (`tomato`), hex (`#3498db`), or function (`rgb(52 152 219)`). Use `fill="none"` for an outline-only shape (pair it with a stroke).
 
-| Class | Result |
-|-------|--------|
-| `.shape-fill-blue` `.shape-fill-green` `.shape-fill-red` `.shape-fill-orange` `.shape-fill-purple` `.shape-fill-yellow` | Named colors |
-| `.shape-fill-black` `.shape-fill-white` | Neutrals |
-| `.shape-fill-none` | Transparent interior |
+```markdown
+::: {.shape-circle fill="#3498db"}
+:::
+```
 
-### Stroke — `.shape-stroke-*`
+### Stroke — `stroke="…"` + `.shape-stroke-*`
 
-Two independent axes: outline **color** and outline **width**. Combine one of each.
+Two independent axes: the outline **color** comes from the `stroke=` attribute (any CSS color), and the outline **width** from a class.
 
 | Color | Width | Default width |
 |-------|-------|---------------|
-| `.shape-stroke-{blue,green,red,orange,purple,yellow,black,white}`, or `.shape-stroke-none` | `.shape-stroke-sm` (1) · `.shape-stroke-md` (3) · `.shape-stroke-lg` (6) · `.shape-stroke-xl` (10) | `3` when a stroke color is set without a width class |
+| `stroke="<any CSS color>"`, or `stroke="none"` | `.shape-stroke-sm` (1) · `.shape-stroke-md` (3) · `.shape-stroke-lg` (6) · `.shape-stroke-xl` (10) | `3` when a stroke color is set without a width class |
 
 ### Size — `.shape-{sm,md,lg,full}`
 

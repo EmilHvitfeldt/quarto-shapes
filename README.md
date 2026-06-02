@@ -26,19 +26,19 @@ filters:
 Then use shape classes on divs:
 
 ```markdown
-::: {.shape-circle .shape-fill-blue}
+::: {.shape-circle fill="blue"}
 Hello
 :::
 
-::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-lg}
+::: {.shape-hexagon fill="none" stroke="red" .shape-stroke-lg .shape-lg}
 :::
 ```
 
 ## Features
 
 - **Shape classes**: circle, square, triangle, hexagon, and more
-- **Fill classes**: `.shape-fill-*` for interior color
-- **Stroke classes**: `.shape-stroke-*` for outline color and `.shape-stroke-{sm,md,lg,xl}` for width
+- **Fill color**: `fill="<any CSS color>"` for the interior
+- **Stroke**: `stroke="<any CSS color>"` for outline color and `.shape-stroke-{sm,md,lg,xl}` for width
 - **Rotation classes**: `.shape-rotate-45` through `.shape-rotate-315`
 - **Sizing classes**: `.shape-sm`, `.shape-md`, `.shape-lg`, `.shape-full`
 - **Composable**: mix any combination of modifiers

@@ -159,10 +159,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#quick-start" id="toc-quick-start" class="nav-link" data-scroll-target="#quick-start">Quick Start</a></li>
-  <li><a href="#modifier-classes" id="toc-modifier-classes" class="nav-link" data-scroll-target="#modifier-classes">Modifier classes</a>
+  <li><a href="#colors-sizes-and-modifiers" id="toc-colors-sizes-and-modifiers" class="nav-link" data-scroll-target="#colors-sizes-and-modifiers">Colors, sizes, and modifiers</a>
   <ul class="collapse">
-  <li><a href="#fill-.shape-fill-" id="toc-fill-.shape-fill-" class="nav-link" data-scroll-target="#fill-.shape-fill-">Fill — <code>.shape-fill-*</code></a></li>
-  <li><a href="#stroke-.shape-stroke-" id="toc-stroke-.shape-stroke-" class="nav-link" data-scroll-target="#stroke-.shape-stroke-">Stroke — <code>.shape-stroke-*</code></a></li>
+  <li><a href="#fill-fill" id="toc-fill-fill" class="nav-link" data-scroll-target="#fill-fill">Fill — <code>fill="…"</code></a></li>
+  <li><a href="#stroke-stroke-.shape-stroke-" id="toc-stroke-stroke-.shape-stroke-" class="nav-link" data-scroll-target="#stroke-stroke-.shape-stroke-">Stroke — <code>stroke="…"</code> + <code>.shape-stroke-*</code></a></li>
   <li><a href="#size-.shape-smmdlgfull" id="toc-size-.shape-smmdlgfull" class="nav-link" data-scroll-target="#size-.shape-smmdlgfull">Size — <code>.shape-{sm,md,lg,full}</code></a></li>
   <li><a href="#rotation-.shape-rotate-" id="toc-rotation-.shape-rotate-" class="nav-link" data-scroll-target="#rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></a></li>
   </ul></li>
@@ -212,48 +212,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> shapes</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then wrap any content in a shape div:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-circle .shape-fill-blue}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-circle fill="blue"}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Hello</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="modifier-classes" class="level2">
-<h2 class="anchored" data-anchor-id="modifier-classes">Modifier classes</h2>
-<p>Every shape accepts modifier classes. They are fully composable — stack any combination on a single div, in any order:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-rotate-90 .shape-md}</span>
+<section id="colors-sizes-and-modifiers" class="level2">
+<h2 class="anchored" data-anchor-id="colors-sizes-and-modifiers">Colors, sizes, and modifiers</h2>
+<p>Colors are set with the <code>fill=</code> and <code>stroke=</code> attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-hexagon fill="none" stroke="red" .shape-stroke-lg .shape-rotate-90 .shape-md}</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="fill-.shape-fill-" class="level3">
-<h3 class="anchored" data-anchor-id="fill-.shape-fill-">Fill — <code>.shape-fill-*</code></h3>
-<p>Sets the interior color. Use <code>.shape-fill-none</code> for an outline-only shape (pair it with a stroke).</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 46%">
-<col style="width: 53%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Class</th>
-<th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>.shape-fill-blue</code> <code>.shape-fill-green</code> <code>.shape-fill-red</code> <code>.shape-fill-orange</code> <code>.shape-fill-purple</code> <code>.shape-fill-yellow</code></td>
-<td>Named colors</td>
-</tr>
-<tr class="even">
-<td><code>.shape-fill-black</code> <code>.shape-fill-white</code></td>
-<td>Neutrals</td>
-</tr>
-<tr class="odd">
-<td><code>.shape-fill-none</code></td>
-<td>Transparent interior</td>
-</tr>
-</tbody>
-</table>
+<section id="fill-fill" class="level3">
+<h3 class="anchored" data-anchor-id="fill-fill">Fill — <code>fill="…"</code></h3>
+<p>Sets the interior color. Accepts <strong>any CSS color</strong> — a named color (<code>tomato</code>), hex (<code>#3498db</code>), or function (<code>rgb(52 152 219)</code>). Use <code>fill="none"</code> for an outline-only shape (pair it with a stroke).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-circle fill="#3498db"}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="stroke-.shape-stroke-" class="level3">
-<h3 class="anchored" data-anchor-id="stroke-.shape-stroke-">Stroke — <code>.shape-stroke-*</code></h3>
-<p>Two independent axes: outline <strong>color</strong> and outline <strong>width</strong>. Combine one of each.</p>
+<section id="stroke-stroke-.shape-stroke-" class="level3">
+<h3 class="anchored" data-anchor-id="stroke-stroke-.shape-stroke-">Stroke — <code>stroke="…"</code> + <code>.shape-stroke-*</code></h3>
+<p>Two independent axes: the outline <strong>color</strong> comes from the <code>stroke=</code> attribute (any CSS color), and the outline <strong>width</strong> from a class.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
@@ -269,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>.shape-stroke-{blue,green,red,orange,purple,yellow,black,white}</code>, or <code>.shape-stroke-none</code></td>
+<td><code>stroke="&lt;any CSS color&gt;"</code>, or <code>stroke="none"</code></td>
 <td><code>.shape-stroke-sm</code> (1) · <code>.shape-stroke-md</code> (3) · <code>.shape-stroke-lg</code> (6) · <code>.shape-stroke-xl</code> (10)</td>
 <td><code>3</code> when a stroke color is set without a width class</td>
 </tr>

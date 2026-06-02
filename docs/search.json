@@ -102,7 +102,7 @@
     "href": "index.html#quick-start",
     "title": "quarto-shapes",
     "section": "Quick Start",
-    "text": "Quick Start\nAdd to your YAML front matter:\n---\ntitle: My Document\nformat: html\nfilters:\n  - shapes\n---\nThen wrap any content in a shape div:\n::: {.shape-circle .shape-fill-blue}\nHello\n:::"
+    "text": "Quick Start\nAdd to your YAML front matter:\n---\ntitle: My Document\nformat: html\nfilters:\n  - shapes\n---\nThen wrap any content in a shape div:\n::: {.shape-circle fill=\"blue\"}\nHello\n:::"
   },
   {
     "objectID": "index.html#examples",
@@ -152,5 +152,12 @@
     "title": "quarto-shapes",
     "section": "Modifier classes",
     "text": "Modifier classes\nEvery shape accepts modifier classes. They are fully composable — stack any combination on a single div, in any order:\n::: {.shape-hexagon .shape-fill-none .shape-stroke-red .shape-stroke-lg .shape-rotate-90 .shape-md}\n:::\n\nFill — .shape-fill-*\nSets the interior color. Use .shape-fill-none for an outline-only shape (pair it with a stroke).\n\n\n\n\n\n\n\nClass\nResult\n\n\n\n\n.shape-fill-blue .shape-fill-green .shape-fill-red .shape-fill-orange .shape-fill-purple .shape-fill-yellow\nNamed colors\n\n\n.shape-fill-black .shape-fill-white\nNeutrals\n\n\n.shape-fill-none\nTransparent interior\n\n\n\n\n\nStroke — .shape-stroke-*\nTwo independent axes: outline color and outline width. Combine one of each.\n\n\n\n\n\n\n\n\nColor\nWidth\nDefault width\n\n\n\n\n.shape-stroke-{blue,green,red,orange,purple,yellow,black,white}, or .shape-stroke-none\n.shape-stroke-sm (1) · .shape-stroke-md (3) · .shape-stroke-lg (6) · .shape-stroke-xl (10)\n3 when a stroke color is set without a width class\n\n\n\n\n\nSize — .shape-{sm,md,lg,full}\nSets the shape’s bounding box. Defaults to 8rem (same as .shape-md) when no size class is given.\n\n\n\nClass\nHTML size\nTypst (print)\n\n\n\n\n.shape-sm\n4rem\n3cm\n\n\n.shape-md\n8rem\n5cm\n\n\n.shape-lg\n14rem\n8cm\n\n\n.shape-full\n100% of container\n—\n\n\n\n\n\nRotation — .shape-rotate-*\nRotates the shape clockwise in 45° steps: .shape-rotate-45, .shape-rotate-90, .shape-rotate-135, .shape-rotate-180, .shape-rotate-225, .shape-rotate-270, .shape-rotate-315.\nSee the HTML example for these modifiers applied across the full shape catalog."
+  },
+  {
+    "objectID": "index.html#colors-sizes-and-modifiers",
+    "href": "index.html#colors-sizes-and-modifiers",
+    "title": "quarto-shapes",
+    "section": "Colors, sizes, and modifiers",
+    "text": "Colors, sizes, and modifiers\nColors are set with the fill= and stroke= attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:\n::: {.shape-hexagon fill=\"none\" stroke=\"red\" .shape-stroke-lg .shape-rotate-90 .shape-md}\n:::\n\nFill — fill=\"…\"\nSets the interior color. Accepts any CSS color — a named color (tomato), hex (#3498db), or function (rgb(52 152 219)). Use fill=\"none\" for an outline-only shape (pair it with a stroke).\n::: {.shape-circle fill=\"#3498db\"}\n:::\n\n\nStroke — stroke=\"…\" + .shape-stroke-*\nTwo independent axes: the outline color comes from the stroke= attribute (any CSS color), and the outline width from a class.\n\n\n\n\n\n\n\n\nColor\nWidth\nDefault width\n\n\n\n\nstroke=\"&lt;any CSS color&gt;\", or stroke=\"none\"\n.shape-stroke-sm (1) · .shape-stroke-md (3) · .shape-stroke-lg (6) · .shape-stroke-xl (10)\n3 when a stroke color is set without a width class\n\n\n\n\n\nSize — .shape-{sm,md,lg,full}\nSets the shape’s bounding box. Defaults to 8rem (same as .shape-md) when no size class is given.\n\n\n\nClass\nHTML size\nTypst (print)\n\n\n\n\n.shape-sm\n4rem\n3cm\n\n\n.shape-md\n8rem\n5cm\n\n\n.shape-lg\n14rem\n8cm\n\n\n.shape-full\n100% of container\n—\n\n\n\n\n\nRotation — .shape-rotate-*\nRotates the shape clockwise in 45° steps: .shape-rotate-45, .shape-rotate-90, .shape-rotate-135, .shape-rotate-180, .shape-rotate-225, .shape-rotate-270, .shape-rotate-315.\nSee the HTML example for these modifiers applied across the full shape catalog."
   }
 ]

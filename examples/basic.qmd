@@ -11,151 +11,151 @@ filters:
 
 Everyday primitives — circles, squares, and simple curved or cut-out variations.
 
-::: {.shape-circle .shape-fill-blue .shape-md}
+::: {.shape-circle fill="#3498db" .shape-md}
 {{< meta title >}}
 :::
-::: {.shape-square .shape-fill-green .shape-md}
+::: {.shape-square fill="#2ecc71" .shape-md}
 :::
-::: {.shape-rectangle .shape-fill-red .shape-md}
+::: {.shape-rectangle fill="#e74c3c" .shape-md}
 :::
-::: {.shape-rounded-square .shape-fill-purple .shape-md}
+::: {.shape-rounded-square fill="#9b59b6" .shape-md}
 :::
-::: {.shape-oval .shape-fill-orange .shape-md}
+::: {.shape-oval fill="#e67e22" .shape-md}
 :::
-::: {.shape-semicircle .shape-fill-blue .shape-md}
+::: {.shape-semicircle fill="#3498db" .shape-md}
 :::
-::: {.shape-pie .shape-fill-green .shape-md}
+::: {.shape-pie fill="#2ecc71" .shape-md}
 :::
-::: {.shape-arc .shape-fill-red .shape-md}
+::: {.shape-arc fill="#e74c3c" .shape-md}
 :::
-::: {.shape-block-arc .shape-fill-purple .shape-md}
+::: {.shape-block-arc fill="#9b59b6" .shape-md}
 :::
-::: {.shape-donut .shape-fill-orange .shape-md}
+::: {.shape-donut fill="#e67e22" .shape-md}
 :::
-::: {.shape-frame .shape-fill-blue .shape-md}
+::: {.shape-frame fill="#3498db" .shape-md}
 :::
 
 ## Polygons
 
 Straight-edged shapes, including regular n-gons from triangle through dodecagon.
 
-::: {.shape-triangle .shape-fill-red .shape-md}
+::: {.shape-triangle fill="#e74c3c" .shape-md}
 :::
-::: {.shape-diamond .shape-fill-blue .shape-md}
+::: {.shape-diamond fill="#3498db" .shape-md}
 :::
-::: {.shape-pentagon .shape-fill-green .shape-md}
+::: {.shape-pentagon fill="#2ecc71" .shape-md}
 :::
-::: {.shape-hexagon .shape-fill-purple .shape-md}
+::: {.shape-hexagon fill="#9b59b6" .shape-md}
 :::
-::: {.shape-heptagon .shape-fill-orange .shape-md}
+::: {.shape-heptagon fill="#e67e22" .shape-md}
 :::
-::: {.shape-octagon .shape-fill-red .shape-md}
+::: {.shape-octagon fill="#e74c3c" .shape-md}
 :::
-::: {.shape-decagon .shape-fill-blue .shape-md}
+::: {.shape-decagon fill="#3498db" .shape-md}
 :::
-::: {.shape-dodecagon .shape-fill-green .shape-md}
+::: {.shape-dodecagon fill="#2ecc71" .shape-md}
 :::
-::: {.shape-parallelogram .shape-fill-purple .shape-md}
+::: {.shape-parallelogram fill="#9b59b6" .shape-md}
 :::
-::: {.shape-trapezoid .shape-fill-orange .shape-md}
+::: {.shape-trapezoid fill="#e67e22" .shape-md}
 :::
 
 ## Stars
 
 Pointed star shapes with varying point counts, plus sun and starburst variants.
 
-::: {.shape-star-4 .shape-fill-yellow .shape-md}
+::: {.shape-star-4 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star .shape-fill-yellow .shape-md}
+::: {.shape-star fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-6 .shape-fill-yellow .shape-md}
+::: {.shape-star-6 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-8 .shape-fill-yellow .shape-md}
+::: {.shape-star-8 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-10 .shape-fill-yellow .shape-md}
+::: {.shape-star-10 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-12 .shape-fill-yellow .shape-md}
+::: {.shape-star-12 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-16 .shape-fill-yellow .shape-md}
+::: {.shape-star-16 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-24 .shape-fill-yellow .shape-md}
+::: {.shape-star-24 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-star-32 .shape-fill-yellow .shape-md}
+::: {.shape-star-32 fill="#f1c40f" .shape-md}
 :::
-::: {.shape-sun .shape-fill-yellow .shape-md}
+::: {.shape-sun fill="#f1c40f" .shape-md}
 :::
-::: {.shape-starburst .shape-fill-yellow .shape-md}
+::: {.shape-starburst fill="#f1c40f" .shape-md}
 :::
 
 ## Nature & Symbols
 
 Recognizable real-world and iconographic shapes like hearts, clouds, and weather.
 
-::: {.shape-heart .shape-fill-red .shape-md}
+::: {.shape-heart fill="#e74c3c" .shape-md}
 :::
-::: {.shape-moon .shape-fill-blue .shape-md}
+::: {.shape-moon fill="#3498db" .shape-md}
 :::
-::: {.shape-cloud .shape-fill-white .shape-stroke-blue .shape-stroke-md .shape-md}
+::: {.shape-cloud fill="#ffffff" stroke="#3498db" .shape-stroke-md .shape-md}
 :::
-::: {.shape-lightning .shape-fill-yellow .shape-md}
+::: {.shape-lightning fill="#f1c40f" .shape-md}
 :::
-::: {.shape-teardrop .shape-fill-blue .shape-md}
+::: {.shape-teardrop fill="#3498db" .shape-md}
 :::
-::: {.shape-wave .shape-fill-blue .shape-md}
+::: {.shape-wave fill="#3498db" .shape-md}
 :::
-::: {.shape-double-wave .shape-fill-green .shape-md}
+::: {.shape-double-wave fill="#2ecc71" .shape-md}
 :::
-::: {.shape-no-symbol .shape-fill-red .shape-md}
+::: {.shape-no-symbol fill="#e74c3c" .shape-md}
 :::
-::: {.shape-smiley .shape-fill-yellow .shape-md}
+::: {.shape-smiley fill="#f1c40f" .shape-md}
 :::
 
 ## Arrows
 
 Directional shapes for indicating flow, movement, or sequence.
 
-::: {.shape-arrow .shape-fill-blue .shape-md}
+::: {.shape-arrow fill="#3498db" .shape-md}
 :::
-::: {.shape-arrow-double .shape-fill-green .shape-md}
+::: {.shape-arrow-double fill="#2ecc71" .shape-md}
 :::
-::: {.shape-notched-arrow .shape-fill-red .shape-md}
+::: {.shape-notched-arrow fill="#e74c3c" .shape-md}
 :::
-::: {.shape-pentagon-arrow .shape-fill-purple .shape-md}
+::: {.shape-pentagon-arrow fill="#9b59b6" .shape-md}
 :::
-::: {.shape-arrow-striped .shape-fill-blue .shape-md}
+::: {.shape-arrow-striped fill="#3498db" .shape-md}
 :::
-::: {.shape-arrow-bent .shape-fill-green .shape-md}
+::: {.shape-arrow-bent fill="#2ecc71" .shape-md}
 :::
-::: {.shape-arrow-uturn .shape-fill-red .shape-md}
+::: {.shape-arrow-uturn fill="#e74c3c" .shape-md}
 :::
-::: {.shape-arrow-circular .shape-fill-purple .shape-md}
+::: {.shape-arrow-circular fill="#9b59b6" .shape-md}
 :::
-::: {.shape-chevron .shape-fill-orange .shape-md}
+::: {.shape-chevron fill="#e67e22" .shape-md}
 :::
 
 ## Callouts & Bubbles
 
 Speech and thought bubbles for annotating or quoting — these are designed to hold text.
 
-::: {.shape-speech-bubble .shape-fill-blue .shape-md}
+::: {.shape-speech-bubble fill="#3498db" .shape-md}
 Hello!
 :::
-::: {.shape-callout-round .shape-fill-green .shape-md}
+::: {.shape-callout-round fill="#2ecc71" .shape-md}
 Hi!
 :::
-::: {.shape-callout-rounded .shape-fill-red .shape-md}
+::: {.shape-callout-rounded fill="#e74c3c" .shape-md}
 Hey!
 :::
-::: {.shape-callout-oval .shape-fill-purple .shape-md}
+::: {.shape-callout-oval fill="#9b59b6" .shape-md}
 Yo!
 :::
-::: {.shape-callout-thought .shape-fill-blue .shape-md}
+::: {.shape-callout-thought fill="#3498db" .shape-md}
 Hmm...
 :::
-::: {.shape-callout-cloud .shape-fill-white .shape-stroke-blue .shape-stroke-md .shape-md}
+::: {.shape-callout-cloud fill="#ffffff" stroke="#3498db" .shape-stroke-md .shape-md}
 Poof
 :::
-::: {.shape-callout-explosion .shape-fill-yellow .shape-md}
+::: {.shape-callout-explosion fill="#f1c40f" .shape-md}
 Boom!
 :::
 
@@ -163,109 +163,109 @@ Boom!
 
 Standard flowchart and diagram symbols (process, data, decision, etc.).
 
-::: {.shape-terminator .shape-fill-blue .shape-md}
+::: {.shape-terminator fill="#3498db" .shape-md}
 :::
-::: {.shape-cylinder .shape-fill-green .shape-md}
+::: {.shape-cylinder fill="#2ecc71" .shape-md}
 :::
-::: {.shape-document .shape-fill-red .shape-md}
+::: {.shape-document fill="#e74c3c" .shape-md}
 :::
-::: {.shape-manual-input .shape-fill-purple .shape-md}
+::: {.shape-manual-input fill="#9b59b6" .shape-md}
 :::
-::: {.shape-delay .shape-fill-orange .shape-md}
+::: {.shape-delay fill="#e67e22" .shape-md}
 :::
-::: {.shape-display .shape-fill-blue .shape-md}
+::: {.shape-display fill="#3498db" .shape-md}
 :::
-::: {.shape-stored-data .shape-fill-green .shape-md}
+::: {.shape-stored-data fill="#2ecc71" .shape-md}
 :::
-::: {.shape-summing-junction .shape-fill-red .shape-md}
+::: {.shape-summing-junction fill="#e74c3c" .shape-md}
 :::
-::: {.shape-off-page .shape-fill-purple .shape-md}
+::: {.shape-off-page fill="#9b59b6" .shape-md}
 :::
 
 ## Block & Functional
 
 Decorative and utility shapes such as crosses, shields, scrolls, and banners.
 
-::: {.shape-cross .shape-fill-red .shape-md}
+::: {.shape-cross fill="#e74c3c" .shape-md}
 :::
-::: {.shape-shield .shape-fill-purple .shape-md}
+::: {.shape-shield fill="#9b59b6" .shape-md}
 :::
-::: {.shape-folded-corner .shape-fill-orange .shape-stroke-black .shape-stroke-sm .shape-md}
+::: {.shape-folded-corner fill="#e67e22" stroke="#111111" .shape-stroke-sm .shape-md}
 :::
-::: {.shape-diagonal-stripe .shape-fill-blue .shape-md}
+::: {.shape-diagonal-stripe fill="#3498db" .shape-md}
 :::
-::: {.shape-scroll .shape-fill-orange .shape-md}
+::: {.shape-scroll fill="#e67e22" .shape-md}
 :::
-::: {.shape-wavy-flag .shape-fill-green .shape-md}
+::: {.shape-wavy-flag fill="#2ecc71" .shape-md}
 :::
-::: {.shape-ribbon .shape-fill-red .shape-md}
+::: {.shape-ribbon fill="#e74c3c" .shape-md}
 :::
 
 ## 3D / Perspective
 
 Shapes drawn with depth to suggest three-dimensional objects.
 
-::: {.shape-cube .shape-fill-blue .shape-stroke-black .shape-stroke-sm .shape-md}
+::: {.shape-cube fill="#3498db" stroke="#111111" .shape-stroke-sm .shape-md}
 :::
-::: {.shape-cylinder-3d .shape-fill-green .shape-stroke-black .shape-stroke-sm .shape-md}
+::: {.shape-cylinder-3d fill="#2ecc71" stroke="#111111" .shape-stroke-sm .shape-md}
 :::
-::: {.shape-cone .shape-fill-red .shape-md}
+::: {.shape-cone fill="#e74c3c" .shape-md}
 :::
-::: {.shape-pyramid .shape-fill-purple .shape-stroke-black .shape-stroke-sm .shape-md}
+::: {.shape-pyramid fill="#9b59b6" stroke="#111111" .shape-stroke-sm .shape-md}
 :::
 
 ## Math Symbols
 
 Operators and mathematical signs rendered as filled shapes.
 
-::: {.shape-minus .shape-fill-black .shape-md}
+::: {.shape-minus fill="#111111" .shape-md}
 :::
-::: {.shape-cross .shape-fill-black .shape-md}
+::: {.shape-cross fill="#111111" .shape-md}
 :::
-::: {.shape-multiply .shape-fill-black .shape-md}
+::: {.shape-multiply fill="#111111" .shape-md}
 :::
-::: {.shape-divide .shape-fill-black .shape-md}
+::: {.shape-divide fill="#111111" .shape-md}
 :::
-::: {.shape-equals .shape-fill-black .shape-md}
+::: {.shape-equals fill="#111111" .shape-md}
 :::
-::: {.shape-not-equal .shape-fill-black .shape-md}
+::: {.shape-not-equal fill="#111111" .shape-md}
 :::
 
 ## Brackets & Braces
 
 Grouping marks — square brackets, curly braces, and parentheses, in left/right pairs.
 
-::: {.shape-bracket-left .shape-fill-black .shape-md}
+::: {.shape-bracket-left fill="#111111" .shape-md}
 :::
-::: {.shape-bracket-right .shape-fill-black .shape-md}
+::: {.shape-bracket-right fill="#111111" .shape-md}
 :::
-::: {.shape-brace-left .shape-fill-black .shape-md}
+::: {.shape-brace-left fill="#111111" .shape-md}
 :::
-::: {.shape-brace-right .shape-fill-black .shape-md}
+::: {.shape-brace-right fill="#111111" .shape-md}
 :::
-::: {.shape-paren-left .shape-fill-black .shape-md}
+::: {.shape-paren-left fill="#111111" .shape-md}
 :::
-::: {.shape-paren-right .shape-fill-black .shape-md}
+::: {.shape-paren-right fill="#111111" .shape-md}
 :::
 
 ## Fill & Stroke
 
-These are not separate shapes — they show modifier classes (`.shape-fill-*`, `.shape-stroke-*`) applied to any shape above.
+These are not separate shapes — they show the `fill=` and `stroke=` attributes (any CSS color) plus the `.shape-stroke-*` width classes applied to any shape above.
 
-::: {.shape-circle .shape-fill-none .shape-stroke-blue .shape-stroke-lg .shape-md}
+::: {.shape-circle fill="none" stroke="#3498db" .shape-stroke-lg .shape-md}
 :::
-::: {.shape-star .shape-fill-red .shape-stroke-black .shape-stroke-md .shape-md}
+::: {.shape-star fill="#e74c3c" stroke="#111111" .shape-stroke-md .shape-md}
 :::
-::: {.shape-cube .shape-fill-blue .shape-stroke-black .shape-stroke-md .shape-md}
+::: {.shape-cube fill="#3498db" stroke="#111111" .shape-stroke-md .shape-md}
 :::
 
 ## Rotation
 
 Also a modifier, not a shape group — the `.shape-rotate-*` classes turn any shape in 45° steps.
 
-::: {.shape-triangle .shape-fill-purple .shape-rotate-180 .shape-md}
+::: {.shape-triangle fill="#9b59b6" .shape-rotate-180 .shape-md}
 :::
-::: {.shape-arrow .shape-fill-blue .shape-rotate-90 .shape-md}
+::: {.shape-arrow fill="#3498db" .shape-rotate-90 .shape-md}
 :::
-::: {.shape-moon .shape-fill-yellow .shape-rotate-270 .shape-md}
+::: {.shape-moon fill="#f1c40f" .shape-rotate-270 .shape-md}
 :::

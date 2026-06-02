@@ -158,11 +158,26 @@ local function render_html(el, shape)
 
   local class_str = table.concat(el.classes, " ")
 
+  -- fill= and stroke= attributes become inline CSS custom properties that
+  -- shapes.css reads on .shape-path. Any valid CSS color is accepted.
+  local styles = {}
+  if el.attributes.fill then
+    table.insert(styles, "--shape-fill:" .. el.attributes.fill)
+  end
+  if el.attributes.stroke then
+    table.insert(styles, "--shape-stroke:" .. el.attributes.stroke)
+  end
+  local style_attr = ""
+  if #styles > 0 then
+    style_attr = string.format(' style="%s"', table.concat(styles, ";"))
+  end
+
   local open = pandoc.RawBlock("html", string.format(
-    '<div class="shape-wrapper %s">'
+    '<div class="shape-wrapper %s"%s>'
     .. '<svg class="shape-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">%s</svg>'
     .. '<div class="shape-content">',
     class_str,
+    style_attr,
     shapes[shape]
   ))
   local close = pandoc.RawBlock("html", "</div></div>")
@@ -173,31 +188,26 @@ local function render_html(el, shape)
   return blocks
 end
 
--- Typst output: shapes.css does not apply, so modifier classes are parsed here
+-- Typst output: shapes.css does not apply, so modifiers are parsed here
 -- and baked directly into a standalone SVG embedded as a Typst image.
-local COLORS = {
-  red = "#e74c3c", blue = "#3498db", green = "#2ecc71", yellow = "#f1c40f",
-  purple = "#9b59b6", orange = "#e67e22", white = "#ffffff", black = "#111111",
-  none = "none",
-}
+-- Fill and stroke colors come from the fill= / stroke= attributes (any CSS
+-- color string); size, stroke width, and rotation still come from classes.
 local SIZES = { sm = "3cm", md = "5cm", lg = "8cm", full = "100%" }
 local STROKE_W = { sm = 1, md = 3, lg = 6, xl = 10 }
 
-local function parse_typst_modifiers(classes)
-  local m = { fill = "#111111", stroke = "none", width = 3, size = "5cm", rotate = 0, center = false }
-  for _, cls in ipairs(classes) do
+local function parse_typst_modifiers(el)
+  local m = {
+    fill = el.attributes.fill or "#111111",
+    stroke = el.attributes.stroke or "none",
+    width = 3, size = "5cm", rotate = 0, center = false,
+  }
+  for _, cls in ipairs(el.classes) do
     local size = cls:match("^shape%-(sm)$") or cls:match("^shape%-(md)$")
       or cls:match("^shape%-(lg)$") or cls:match("^shape%-(full)$")
     if size and SIZES[size] then m.size = SIZES[size] end
 
-    local fill = cls:match("^shape%-fill%-(%a+)$")
-    if fill and COLORS[fill] then m.fill = COLORS[fill] end
-
     local sw = cls:match("^shape%-stroke%-(%a+)$")
-    if sw then
-      if COLORS[sw] then m.stroke = COLORS[sw] end
-      if STROKE_W[sw] then m.width = STROKE_W[sw] end
-    end
+    if sw and STROKE_W[sw] then m.width = STROKE_W[sw] end
 
     local rot = cls:match("^shape%-rotate%-(%d+)$")
     if rot then m.rotate = tonumber(rot) end
@@ -208,7 +218,7 @@ local function parse_typst_modifiers(classes)
 end
 
 local function render_typst(el, shape)
-  local m = parse_typst_modifiers(el.classes)
+  local m = parse_typst_modifiers(el)
 
   local elem = shapes[shape]:gsub('"', "'")
   elem = elem:gsub("class='shape%-path'", string.format(

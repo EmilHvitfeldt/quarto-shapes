@@ -45,27 +45,8 @@
 .shape-rotate-270 { --shape-rotate: 270deg; }
 .shape-rotate-315 { --shape-rotate: 315deg; }
 
-/* Fill */
-.shape-fill-red    { --shape-fill: #e74c3c; }
-.shape-fill-blue   { --shape-fill: #3498db; }
-.shape-fill-green  { --shape-fill: #2ecc71; }
-.shape-fill-yellow { --shape-fill: #f1c40f; }
-.shape-fill-purple { --shape-fill: #9b59b6; }
-.shape-fill-orange { --shape-fill: #e67e22; }
-.shape-fill-white  { --shape-fill: #ffffff; }
-.shape-fill-black  { --shape-fill: #111111; }
-.shape-fill-none   { --shape-fill: none; }
-
-/* Stroke color */
-.shape-stroke-red    { --shape-stroke: #e74c3c; }
-.shape-stroke-blue   { --shape-stroke: #3498db; }
-.shape-stroke-green  { --shape-stroke: #2ecc71; }
-.shape-stroke-yellow { --shape-stroke: #f1c40f; }
-.shape-stroke-purple { --shape-stroke: #9b59b6; }
-.shape-stroke-orange { --shape-stroke: #e67e22; }
-.shape-stroke-white  { --shape-stroke: #ffffff; }
-.shape-stroke-black  { --shape-stroke: #111111; }
-.shape-stroke-none   { --shape-stroke: none; }
+/* Fill and stroke colors are set via the fill= and stroke= attributes,
+   which the filter turns into inline --shape-fill / --shape-stroke values. */
 
 /* Stroke width */
 .shape-stroke-sm { --shape-stroke-width: 1; }

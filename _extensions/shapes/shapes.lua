@@ -33,9 +33,10 @@ local shapes = {
   ["rounded-square"] = '<rect x="5" y="5" width="90" height="90" rx="15" ry="15" class="shape-path"/>',
   oval          = '<ellipse cx="50" cy="50" rx="48" ry="30" class="shape-path"/>',
   semicircle    = '<path d="M3,50 A47,47 0 0,1 97,50 Z" class="shape-path"/>',
-  pie           = '<path d="M50,50 L50,3 A47,47 0 0,1 97,50 Z" class="shape-path"/>',
+  pie           = '<path d="M50,50 L97,50 A47,47 0 1,1 50,3 Z" class="shape-path"/>',
+  wedge         = '<path d="M2,98 L2,3 A95,95 0 0,1 97,98 Z" class="shape-path"/>',
   arc           = '<path d="M50,5 A45,45 0 0,0 50,95 L50,70 A20,20 0 0,1 50,30 Z" class="shape-path"/>',
-  ["block-arc"] = '<path d="M50,5 A45,45 0 1,0 5,50 L20,50 A30,30 0 1,1 50,20 Z" class="shape-path"/>',
+  ["block-arc"] = '<path d="M50,3 A47,47 0 1,0 97,50 L78,50 A28,28 0 1,1 50,22 Z" class="shape-path"/>',
   donut         = '<path fill-rule="evenodd" d="M50,3 A47,47 0 1,1 50,97 A47,47 0 1,1 50,3 M50,22 A28,28 0 1,0 50,78 A28,28 0 1,0 50,22" class="shape-path"/>',
   frame         = '<path fill-rule="evenodd" d="M2,2 L98,2 L98,98 L2,98 Z M14,14 L86,14 L86,86 L14,86 Z" class="shape-path"/>',
 

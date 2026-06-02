@@ -74,7 +74,7 @@
     "href": "examples/basic.html#fill-stroke",
     "title": "Basic Usage",
     "section": "Fill & Stroke",
-    "text": "Fill & Stroke\nThese are not separate shapes — they show modifier classes (.shape-fill-*, .shape-stroke-*) applied to any shape above."
+    "text": "Fill & Stroke\nThese are not separate shapes — they show the fill= and stroke= attributes (any CSS color) plus the .shape-stroke-* width classes applied to any shape above."
   },
   {
     "objectID": "examples/basic.html#rotation",

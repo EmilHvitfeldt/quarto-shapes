@@ -26,6 +26,8 @@ Everyday primitives — circles, squares, and simple curved or cut-out variation
 :::
 ::: {.shape-pie fill="#2ecc71" .shape-md}
 :::
+::: {.shape-wedge fill="#1abc9c" .shape-md}
+:::
 ::: {.shape-arc fill="#e74c3c" .shape-md}
 :::
 ::: {.shape-block-arc fill="#9b59b6" .shape-md}

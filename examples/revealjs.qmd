@@ -37,6 +37,22 @@ Fill, stroke, size, and rotation are all composable.
 :::
 ::::
 
+## Position with `.absolute`
+
+RevealJS's `.absolute` class lets you place shapes anywhere on the slide using `top`, `left`, `right`, and `bottom`.
+
+::: {.shape-star fill="#FCC93F" .shape-md .absolute top=260 left=40}
+:::
+
+::: {.shape-circle fill="#4DADAD" .shape-md .absolute top=240 right=80}
+:::
+
+::: {.shape-arrow fill="#E24A68" .shape-md .shape-rotate-45 .absolute bottom=60 left=340}
+:::
+
+::: {.shape-hexagon fill="#42526C" .shape-lg .absolute bottom=40 right=120}
+:::
+
 ## Decorate a list
 
 ::: {.shape-shield fill="#42526C" .shape-md .shape-center}

@@ -171,6 +171,17 @@ local function render_html(el, shape)
   if el.attributes.size then
     table.insert(styles, "--shape-size:" .. el.attributes.size)
   end
+  -- RevealJS's .absolute reads top/left/right/bottom (and width/height) as
+  -- inline px offsets. Quarto normally injects these, but because we replace
+  -- the Div with raw HTML we have to forward them ourselves. A bare number is
+  -- treated as px; any other value (e.g. "50%") is passed through verbatim.
+  for _, prop in ipairs({ "top", "left", "right", "bottom", "width", "height" }) do
+    local val = el.attributes[prop]
+    if val then
+      if val:match("^%-?%d+%.?%d*$") then val = val .. "px" end
+      table.insert(styles, prop .. ":" .. val)
+    end
+  end
   local style_attr = ""
   if #styles > 0 then
     style_attr = string.format(' style="%s"', table.concat(styles, ";"))

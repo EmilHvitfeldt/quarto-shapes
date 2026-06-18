@@ -180,5 +180,12 @@
     "title": "Basic Usage",
     "section": "Rotation",
     "text": "Rotation\nAlso a modifier, not a shape group — the .shape-rotate-* classes turn any shape in 45° steps.\n\n\n\n.shape-triangle\n\n\n\n\n.shape-arrow\n\n\n\n\n.shape-moon"
+  },
+  {
+    "objectID": "examples/revealjs.html#position-with-.absolute",
+    "href": "examples/revealjs.html#position-with-.absolute",
+    "title": "Shapes on Slides",
+    "section": "Position with .absolute",
+    "text": "Position with .absolute\nRevealJS’s .absolute class lets you place shapes anywhere on the slide using top, left, right, and bottom."
   }
 ]

@@ -63,10 +63,10 @@ Colors are set with the `fill=` and `stroke=` attributes; size, stroke width, an
 
 ### Fill — `fill="…"`
 
-Sets the interior color. Accepts **any CSS color** — a named color (`tomato`), hex (`#3498db`), or function (`rgb(52 152 219)`). Use `fill="none"` for an outline-only shape (pair it with a stroke).
+Sets the interior color. Accepts **any CSS color** — a named color (`tomato`), hex (`#42526C`), or function (`rgb(52 152 219)`). Use `fill="none"` for an outline-only shape (pair it with a stroke).
 
 ```markdown
-::: {.shape-circle fill="#3498db"}
+::: {.shape-circle fill="#42526C"}
 :::
 ```
 
@@ -92,7 +92,7 @@ Sets the shape's bounding box. Defaults to `8rem` (same as `.shape-md`) when no 
 For a custom size, use the `size=` attribute with any length. It overrides the size classes and works in both HTML and Typst.
 
 ```markdown
-::: {.shape-circle fill="#3498db" size="3cm"}
+::: {.shape-circle fill="#42526C" size="3cm"}
 :::
 ```
 

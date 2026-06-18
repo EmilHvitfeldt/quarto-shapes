@@ -83,8 +83,6 @@ local shapes = {
   ["pentagon-arrow"] = '<polygon points="2,15 72,15 98,50 72,85 2,85" class="shape-path"/>',
   ["arrow-striped"]  = '<path fill-rule="evenodd" d="M2,30 L65,30 L65,10 L98,50 L65,90 L65,70 L2,70 Z M20,30 L26,30 L26,70 L20,70 Z M38,30 L44,30 L44,70 L38,70 Z" class="shape-path"/>',
   ["arrow-bent"]     = '<polygon points="2,15 55,15 55,2 98,35 55,68 55,55 35,55 35,95 2,95" class="shape-path"/>',
-  ["arrow-uturn"]    = '<path d="M20,95 L20,45 C20,15 80,15 80,45 L80,30 L98,50 L80,70 L80,55 C80,35 35,35 35,55 L35,95 Z" class="shape-path"/>',
-  ["arrow-circular"] = '<path d="M50,3 A47,47 0 1,1 97,50 L84,38 L98,58 L76,68 L78,52 A33,33 0 1,0 50,17 Z" class="shape-path"/>',
   chevron            = '<polygon points="2,2 65,2 98,50 65,98 2,98 35,50" class="shape-path"/>',
 
   -- ── Callouts & speech bubbles ─────────────────────────────────────────────────
@@ -132,7 +130,7 @@ local shapes = {
   multiply             = '<path d="M15,10 L35,10 L50,30 L65,10 L85,10 L62,50 L85,90 L65,90 L50,70 L35,90 L15,90 L38,50 Z" class="shape-path"/>',
   divide               = '<path d="M10,46 L90,46 L90,54 L10,54 Z M44,10 A6,6 0 1,0 56,10 A6,6 0 1,0 44,10 M44,80 A6,6 0 1,0 56,80 A6,6 0 1,0 44,80" class="shape-path"/>',
   equals               = '<path d="M10,35 L90,35 L90,45 L10,45 Z M10,55 L90,55 L90,65 L10,65 Z" class="shape-path"/>',
-  ["not-equal"]        = '<path d="M10,32 L90,32 L90,42 L10,42 Z M10,58 L90,58 L90,68 L10,68 Z M62,8 L38,92 L45,95 L69,11 Z" class="shape-path"/>',
+  ["not-equal"]        = '<path d="M10,32 L90,32 L90,42 L10,42 Z M10,58 L90,58 L90,68 L10,68 Z M69,11 L45,95 L38,92 L62,8 Z" class="shape-path"/>',
 
   -- ── Brackets & braces ─────────────────────────────────────────────────────────
   ["bracket-left"]     = '<path d="M60,5 L40,5 L40,95 L60,95 L60,88 L47,88 L47,12 L60,12 Z" class="shape-path"/>',

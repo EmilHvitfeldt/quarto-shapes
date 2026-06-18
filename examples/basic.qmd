@@ -294,16 +294,6 @@ Directional shapes for indicating flow, movement, or sequence.
 [`.shape-arrow-bent`]{.shape-name}
 :::::
 ::::: {.shape-item}
-::: {.shape-arrow-uturn fill="#e74c3c" .shape-md}
-:::
-[`.shape-arrow-uturn`]{.shape-name}
-:::::
-::::: {.shape-item}
-::: {.shape-arrow-circular fill="#9b59b6" .shape-md}
-:::
-[`.shape-arrow-circular`]{.shape-name}
-:::::
-::::: {.shape-item}
 ::: {.shape-chevron fill="#e67e22" .shape-md}
 :::
 [`.shape-chevron`]{.shape-name}

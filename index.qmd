@@ -42,7 +42,7 @@ Every shape is a class of the form `.shape-<name>`. The full catalog, grouped by
 | Polygons | `.shape-triangle`, `.shape-diamond`, `.shape-pentagon`, `.shape-hexagon`, `.shape-heptagon`, `.shape-octagon`, `.shape-decagon`, `.shape-dodecagon`, `.shape-parallelogram`, `.shape-trapezoid` |
 | Stars | `.shape-star-4`, `.shape-star`, `.shape-star-6`, `.shape-star-8`, `.shape-star-10`, `.shape-star-12`, `.shape-star-16`, `.shape-star-24`, `.shape-star-32`, `.shape-sun`, `.shape-starburst` |
 | Nature & symbols | `.shape-heart`, `.shape-moon`, `.shape-cloud`, `.shape-lightning`, `.shape-teardrop`, `.shape-wave`, `.shape-double-wave`, `.shape-no-symbol`, `.shape-smiley` |
-| Arrows | `.shape-arrow`, `.shape-arrow-double`, `.shape-notched-arrow`, `.shape-pentagon-arrow`, `.shape-arrow-striped`, `.shape-arrow-bent`, `.shape-arrow-uturn`, `.shape-arrow-circular`, `.shape-chevron` |
+| Arrows | `.shape-arrow`, `.shape-arrow-double`, `.shape-notched-arrow`, `.shape-pentagon-arrow`, `.shape-arrow-striped`, `.shape-arrow-bent`, `.shape-chevron` |
 | Callouts & bubbles | `.shape-speech-bubble`, `.shape-callout-round`, `.shape-callout-rounded`, `.shape-callout-oval`, `.shape-callout-thought`, `.shape-callout-cloud`, `.shape-callout-explosion` |
 | Flowchart | `.shape-terminator`, `.shape-cylinder`, `.shape-document`, `.shape-manual-input`, `.shape-delay`, `.shape-display`, `.shape-stored-data`, `.shape-summing-junction`, `.shape-off-page` |
 | Block & functional | `.shape-cross`, `.shape-shield`, `.shape-folded-corner`, `.shape-diagonal-stripe`, `.shape-scroll`, `.shape-wavy-flag`, `.shape-ribbon` |

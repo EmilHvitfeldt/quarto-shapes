@@ -4,6 +4,7 @@ project:
   render:
     - index.qmd
     - examples/basic.qmd
+    - examples/revealjs.qmd
 
 website:
   title: "quarto-shapes"
@@ -15,6 +16,8 @@ website:
         menu:
           - href: examples/basic.qmd
             text: Basic Usage
+          - href: examples/revealjs.qmd
+            text: RevealJS Slides
 
 format:
   html:

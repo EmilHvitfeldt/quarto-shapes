@@ -119,6 +119,7 @@ Note these print-specific behaviors.
 
 - [View HTML Example](examples/basic.html){.btn .btn-primary}
 - [View PDF (Typst) Example](examples/basic.pdf){.btn .btn-primary}
+- [View RevealJS Example](examples/revealjs.html){.btn .btn-primary}
 - [Source Code](https://github.com/emilhvitfeldt/quarto-shapes/blob/main/examples/basic.qmd){.btn .btn-secondary}
 
 ![](examples/basic.html){width="100%" height="400" style="border: 1px solid #ccc; border-radius: 4px;"}

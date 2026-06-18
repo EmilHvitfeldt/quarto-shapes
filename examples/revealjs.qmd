@@ -1,0 +1,47 @@
+---
+title: "Shapes on Slides"
+subtitle: "Using quarto-shapes in a RevealJS presentation"
+format: revealjs
+filters:
+  - ../_extensions/shapes/shapes.lua
+---
+
+## Shapes work on slides
+
+The same `.shape-*` divs you use in HTML documents render in RevealJS presentations.
+
+::: {.shape-circle fill="#42526C" .shape-lg .shape-center}
+Hello
+:::
+
+## Hold content
+
+Callout shapes are designed to wrap text, so they double as decorative containers on a slide.
+
+::: {.shape-speech-bubble fill="#4DADAD" .shape-lg .shape-center}
+A point worth making
+:::
+
+## Mix modifiers
+
+Fill, stroke, size, and rotation are all composable.
+
+:::: {layout-ncol=3}
+::: {.shape-hexagon fill="none" stroke="#E24A68" .shape-stroke-lg .shape-md}
+:::
+
+::: {.shape-star fill="#FCC93F" .shape-md}
+:::
+
+::: {.shape-arrow fill="#42526C" .shape-rotate-90 .shape-md}
+:::
+::::
+
+## Decorate a list
+
+::: {.shape-shield fill="#42526C" .shape-md .shape-center}
+:::
+
+- Built from inline SVG
+- No image files to manage
+- Styled entirely with attributes and classes

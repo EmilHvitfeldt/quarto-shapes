@@ -1,5 +1,82 @@
 [
   {
+    "objectID": "examples/revealjs.html#shapes-work-on-slides",
+    "href": "examples/revealjs.html#shapes-work-on-slides",
+    "title": "Shapes on Slides",
+    "section": "Shapes work on slides",
+    "text": "Shapes work on slides\nThe same .shape-* divs you use in HTML documents render in RevealJS presentations.\n\nHello"
+  },
+  {
+    "objectID": "examples/revealjs.html#hold-content",
+    "href": "examples/revealjs.html#hold-content",
+    "title": "Shapes on Slides",
+    "section": "Hold content",
+    "text": "Hold content\nCallout shapes are designed to wrap text, so they double as decorative containers on a slide.\n\nA point worth making"
+  },
+  {
+    "objectID": "examples/revealjs.html#mix-modifiers",
+    "href": "examples/revealjs.html#mix-modifiers",
+    "title": "Shapes on Slides",
+    "section": "Mix modifiers",
+    "text": "Mix modifiers\nFill, stroke, size, and rotation are all composable."
+  },
+  {
+    "objectID": "examples/revealjs.html#decorate-a-list",
+    "href": "examples/revealjs.html#decorate-a-list",
+    "title": "Shapes on Slides",
+    "section": "Decorate a list",
+    "text": "Decorate a list\n\n\n\nBuilt from inline SVG\nNo image files to manage\nStyled entirely with attributes and classes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quarto-shapes",
+    "section": "",
+    "text": "Style divs as shapes that can contain text and other elements. Supports fill, stroke, rotation, and sizing — all composable as classes."
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "quarto-shapes",
+    "section": "Installation",
+    "text": "Installation\nquarto add emilhvitfeldt/quarto-shapes"
+  },
+  {
+    "objectID": "index.html#quick-start",
+    "href": "index.html#quick-start",
+    "title": "quarto-shapes",
+    "section": "Quick Start",
+    "text": "Quick Start\nAdd to your YAML front matter:\n---\ntitle: My Document\nformat: html\nfilters:\n  - shapes\n---\nThen wrap any content in a shape div:\n::: {.shape-circle fill=\"blue\"}\nHello\n:::"
+  },
+  {
+    "objectID": "index.html#shape-classes",
+    "href": "index.html#shape-classes",
+    "title": "quarto-shapes",
+    "section": "Shape classes",
+    "text": "Shape classes\nEvery shape is a class of the form .shape-&lt;name&gt;. The full catalog, grouped by category:\n\n\n\n\n\n\n\nCategory\nShape classes\n\n\n\n\nBasic geometric\n.shape-circle, .shape-square, .shape-rectangle, .shape-rounded-square, .shape-oval, .shape-semicircle, .shape-pie, .shape-wedge, .shape-arc, .shape-block-arc, .shape-donut, .shape-frame\n\n\nPolygons\n.shape-triangle, .shape-diamond, .shape-pentagon, .shape-hexagon, .shape-heptagon, .shape-octagon, .shape-decagon, .shape-dodecagon, .shape-parallelogram, .shape-trapezoid\n\n\nStars\n.shape-star-4, .shape-star, .shape-star-6, .shape-star-8, .shape-star-10, .shape-star-12, .shape-star-16, .shape-star-24, .shape-star-32, .shape-sun, .shape-starburst\n\n\nNature & symbols\n.shape-heart, .shape-moon, .shape-cloud, .shape-lightning, .shape-teardrop, .shape-wave, .shape-double-wave, .shape-no-symbol, .shape-smiley\n\n\nArrows\n.shape-arrow, .shape-arrow-double, .shape-notched-arrow, .shape-pentagon-arrow, .shape-arrow-striped, .shape-arrow-bent, .shape-chevron\n\n\nCallouts & bubbles\n.shape-speech-bubble, .shape-callout-round, .shape-callout-rounded, .shape-callout-oval, .shape-callout-thought, .shape-callout-cloud, .shape-callout-explosion\n\n\nFlowchart\n.shape-terminator, .shape-cylinder, .shape-document, .shape-manual-input, .shape-delay, .shape-display, .shape-stored-data, .shape-summing-junction, .shape-off-page\n\n\nBlock & functional\n.shape-cross, .shape-shield, .shape-folded-corner, .shape-diagonal-stripe, .shape-scroll, .shape-wavy-flag, .shape-ribbon\n\n\n3D / perspective\n.shape-cube, .shape-cylinder-3d, .shape-cone, .shape-pyramid\n\n\nMath symbols\n.shape-minus, .shape-multiply, .shape-divide, .shape-equals, .shape-not-equal\n\n\nBrackets & braces\n.shape-bracket-left, .shape-bracket-right, .shape-brace-left, .shape-brace-right, .shape-paren-left, .shape-paren-right\n\n\n\nThe HTML example renders every one of these with its class name labeled underneath."
+  },
+  {
+    "objectID": "index.html#colors-sizes-and-modifiers",
+    "href": "index.html#colors-sizes-and-modifiers",
+    "title": "quarto-shapes",
+    "section": "Colors, sizes, and modifiers",
+    "text": "Colors, sizes, and modifiers\nColors are set with the fill= and stroke= attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:\n::: {.shape-hexagon fill=\"none\" stroke=\"red\" .shape-stroke-lg .shape-rotate-90 .shape-md}\n:::\n\nFill — fill=\"…\"\nSets the interior color. Accepts any CSS color — a named color (tomato), hex (#42526C), or function (rgb(52 152 219)). Use fill=\"none\" for an outline-only shape (pair it with a stroke).\n::: {.shape-circle fill=\"#42526C\"}\n:::\n\n\nStroke — stroke=\"…\" + .shape-stroke-*\nTwo independent axes: the outline color comes from the stroke= attribute (any CSS color), and the outline width from a class.\n\n\n\n\n\n\n\n\nColor\nWidth\nDefault width\n\n\n\n\nstroke=\"&lt;any CSS color&gt;\", or stroke=\"none\"\n.shape-stroke-sm (1) · .shape-stroke-md (3) · .shape-stroke-lg (6) · .shape-stroke-xl (10)\n3 when a stroke color is set without a width class\n\n\n\n\n\nSize — .shape-{sm,md,lg,full} or size=\"…\"\nSets the shape’s bounding box. Defaults to 8rem (same as .shape-md) when no size class is given.\n\n\n\nClass\nHTML size\nTypst (print)\n\n\n\n\n.shape-sm\n4rem\n3cm\n\n\n.shape-md\n8rem\n5cm\n\n\n.shape-lg\n14rem\n8cm\n\n\n.shape-full\n100% of container\n—\n\n\n\nFor a custom size, use the size= attribute with any length. It overrides the size classes and works in both HTML and Typst.\n::: {.shape-circle fill=\"#42526C\" size=\"3cm\"}\n:::\nThe value is passed through to both outputs as-is, so for documents you render to both HTML and Typst use a unit valid in each (cm, mm, in, pt). Typst does not accept px.\n\n\nRotation — .shape-rotate-*\nRotates the shape clockwise in 45° steps: .shape-rotate-45, .shape-rotate-90, .shape-rotate-135, .shape-rotate-180, .shape-rotate-225, .shape-rotate-270, .shape-rotate-315.\nSee the HTML example for these modifiers applied across the full shape catalog."
+  },
+  {
+    "objectID": "index.html#typst-pdf-output",
+    "href": "index.html#typst-pdf-output",
+    "title": "quarto-shapes",
+    "section": "Typst / PDF output",
+    "text": "Typst / PDF output\nShapes also render in Quarto’s typst format (PDF). The existing SVG definitions are embedded as Typst images, so every shape is available. Note these print-specific behaviors.\n\nSize classes map to print lengths: .shape-sm 3cm, .shape-md 5cm, .shape-lg 8cm.\nContent is centered within the shape’s bounding box, not its visual outline."
+  },
+  {
+    "objectID": "index.html#examples",
+    "href": "index.html#examples",
+    "title": "quarto-shapes",
+    "section": "Examples",
+    "text": "Examples\n\nBasic Usage\n\nView HTML Example\nView PDF (Typst) Example\nView RevealJS Example\nSource Code"
+  },
+  {
     "objectID": "examples/basic.html",
     "href": "examples/basic.html",
     "title": "Basic Usage",
@@ -74,7 +151,7 @@
     "href": "examples/basic.html#math-symbols",
     "title": "Basic Usage",
     "section": "Math Symbols",
-    "text": "Math Symbols\nOperators and mathematical signs rendered as filled shapes.\n\n\n\n.shape-minus\n\n\n\n\n.shape-cross\n\n\n\n\n.shape-multiply\n\n\n\n\n.shape-divide\n\n\n\n\n.shape-equals\n\n\n\n\n.shape-not-equal"
+    "text": "Math Symbols\nOperators and mathematical signs rendered as filled shapes.\n\n\n\n.shape-minus\n\n\n\n\n.shape-multiply\n\n\n\n\n.shape-divide\n\n\n\n\n.shape-equals\n\n\n\n\n.shape-not-equal"
   },
   {
     "objectID": "examples/basic.html#brackets-braces",
@@ -103,54 +180,5 @@
     "title": "Basic Usage",
     "section": "Rotation",
     "text": "Rotation\nAlso a modifier, not a shape group — the .shape-rotate-* classes turn any shape in 45° steps.\n\n\n\n.shape-triangle\n\n\n\n\n.shape-arrow\n\n\n\n\n.shape-moon"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "quarto-shapes",
-    "section": "",
-    "text": "Style divs as shapes that can contain text and other elements. Supports fill, stroke, rotation, and sizing — all composable as classes."
-  },
-  {
-    "objectID": "index.html#installation",
-    "href": "index.html#installation",
-    "title": "quarto-shapes",
-    "section": "Installation",
-    "text": "Installation\nquarto add emilhvitfeldt/quarto-shapes"
-  },
-  {
-    "objectID": "index.html#quick-start",
-    "href": "index.html#quick-start",
-    "title": "quarto-shapes",
-    "section": "Quick Start",
-    "text": "Quick Start\nAdd to your YAML front matter:\n---\ntitle: My Document\nformat: html\nfilters:\n  - shapes\n---\nThen wrap any content in a shape div:\n::: {.shape-circle fill=\"blue\"}\nHello\n:::"
-  },
-  {
-    "objectID": "index.html#shape-classes",
-    "href": "index.html#shape-classes",
-    "title": "quarto-shapes",
-    "section": "Shape classes",
-    "text": "Shape classes\nEvery shape is a class of the form .shape-&lt;name&gt;. The full catalog, grouped by category:\n\n\n\n\n\n\n\nCategory\nShape classes\n\n\n\n\nBasic geometric\n.shape-circle, .shape-square, .shape-rectangle, .shape-rounded-square, .shape-oval, .shape-semicircle, .shape-pie, .shape-wedge, .shape-arc, .shape-block-arc, .shape-donut, .shape-frame\n\n\nPolygons\n.shape-triangle, .shape-diamond, .shape-pentagon, .shape-hexagon, .shape-heptagon, .shape-octagon, .shape-decagon, .shape-dodecagon, .shape-parallelogram, .shape-trapezoid\n\n\nStars\n.shape-star-4, .shape-star, .shape-star-6, .shape-star-8, .shape-star-10, .shape-star-12, .shape-star-16, .shape-star-24, .shape-star-32, .shape-sun, .shape-starburst\n\n\nNature & symbols\n.shape-heart, .shape-moon, .shape-cloud, .shape-lightning, .shape-teardrop, .shape-wave, .shape-double-wave, .shape-no-symbol, .shape-smiley\n\n\nArrows\n.shape-arrow, .shape-arrow-double, .shape-notched-arrow, .shape-pentagon-arrow, .shape-arrow-striped, .shape-arrow-bent, .shape-chevron\n\n\nCallouts & bubbles\n.shape-speech-bubble, .shape-callout-round, .shape-callout-rounded, .shape-callout-oval, .shape-callout-thought, .shape-callout-cloud, .shape-callout-explosion\n\n\nFlowchart\n.shape-terminator, .shape-cylinder, .shape-document, .shape-manual-input, .shape-delay, .shape-display, .shape-stored-data, .shape-summing-junction, .shape-off-page\n\n\nBlock & functional\n.shape-cross, .shape-shield, .shape-folded-corner, .shape-diagonal-stripe, .shape-scroll, .shape-wavy-flag, .shape-ribbon\n\n\n3D / perspective\n.shape-cube, .shape-cylinder-3d, .shape-cone, .shape-pyramid\n\n\nMath symbols\n.shape-minus, .shape-multiply, .shape-divide, .shape-equals, .shape-not-equal\n\n\nBrackets & braces\n.shape-bracket-left, .shape-bracket-right, .shape-brace-left, .shape-brace-right, .shape-paren-left, .shape-paren-right\n\n\n\nThe HTML example renders every one of these with its class name labeled underneath."
-  },
-  {
-    "objectID": "index.html#colors-sizes-and-modifiers",
-    "href": "index.html#colors-sizes-and-modifiers",
-    "title": "quarto-shapes",
-    "section": "Colors, sizes, and modifiers",
-    "text": "Colors, sizes, and modifiers\nColors are set with the fill= and stroke= attributes; size, stroke width, and rotation are classes. Everything is composable — mix attributes and classes on a single div, in any order:\n::: {.shape-hexagon fill=\"none\" stroke=\"red\" .shape-stroke-lg .shape-rotate-90 .shape-md}\n:::\n\nFill — fill=\"…\"\nSets the interior color. Accepts any CSS color — a named color (tomato), hex (#42526C), or function (rgb(52 152 219)). Use fill=\"none\" for an outline-only shape (pair it with a stroke).\n::: {.shape-circle fill=\"#42526C\"}\n:::\n\n\nStroke — stroke=\"…\" + .shape-stroke-*\nTwo independent axes: the outline color comes from the stroke= attribute (any CSS color), and the outline width from a class.\n\n\n\n\n\n\n\n\nColor\nWidth\nDefault width\n\n\n\n\nstroke=\"&lt;any CSS color&gt;\", or stroke=\"none\"\n.shape-stroke-sm (1) · .shape-stroke-md (3) · .shape-stroke-lg (6) · .shape-stroke-xl (10)\n3 when a stroke color is set without a width class\n\n\n\n\n\nSize — .shape-{sm,md,lg,full} or size=\"…\"\nSets the shape’s bounding box. Defaults to 8rem (same as .shape-md) when no size class is given.\n\n\n\nClass\nHTML size\nTypst (print)\n\n\n\n\n.shape-sm\n4rem\n3cm\n\n\n.shape-md\n8rem\n5cm\n\n\n.shape-lg\n14rem\n8cm\n\n\n.shape-full\n100% of container\n—\n\n\n\nFor a custom size, use the size= attribute with any length. It overrides the size classes and works in both HTML and Typst.\n::: {.shape-circle fill=\"#42526C\" size=\"3cm\"}\n:::\nThe value is passed through to both outputs as-is, so for documents you render to both HTML and Typst use a unit valid in each (cm, mm, in, pt). Typst does not accept px.\n\n\nRotation — .shape-rotate-*\nRotates the shape clockwise in 45° steps: .shape-rotate-45, .shape-rotate-90, .shape-rotate-135, .shape-rotate-180, .shape-rotate-225, .shape-rotate-270, .shape-rotate-315.\nSee the HTML example for these modifiers applied across the full shape catalog."
-  },
-  {
-    "objectID": "index.html#typst-pdf-output",
-    "href": "index.html#typst-pdf-output",
-    "title": "quarto-shapes",
-    "section": "Typst / PDF output",
-    "text": "Typst / PDF output\nShapes also render in Quarto’s typst format (PDF). The existing SVG definitions are embedded as Typst images, so every shape is available. Note these print-specific behaviors.\n\nSize classes map to print lengths: .shape-sm 3cm, .shape-md 5cm, .shape-lg 8cm.\nContent is centered within the shape’s bounding box, not its visual outline."
-  },
-  {
-    "objectID": "index.html#examples",
-    "href": "index.html#examples",
-    "title": "quarto-shapes",
-    "section": "Examples",
-    "text": "Examples\n\nBasic Usage\n\nView HTML Example\nView PDF (Typst) Example\nSource Code"
   }
 ]

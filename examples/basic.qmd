@@ -471,11 +471,6 @@ Operators and mathematical signs rendered as filled shapes.
 [`.shape-minus`]{.shape-name}
 :::::
 ::::: {.shape-item}
-::: {.shape-cross fill="#111111" .shape-md}
-:::
-[`.shape-cross`]{.shape-name}
-:::::
-::::: {.shape-item}
 ::: {.shape-multiply fill="#111111" .shape-md}
 :::
 [`.shape-multiply`]{.shape-name}

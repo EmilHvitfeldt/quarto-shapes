@@ -4,6 +4,8 @@ CSS shape classes for Quarto — style divs as shapes (circles, hexagons, stars,
 
 📖 **[Documentation site](https://emilhvitfeldt.github.io/quarto-shapes/)**
 
+![A grid of shapes: circle, star, hexagon, heart, triangle, diamond, cloud, arrow, pentagon, moon, lightning bolt, and octagon.](examples/grid-shot.png)
+
 ## Installation
 
 ```bash

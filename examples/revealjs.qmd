@@ -19,7 +19,7 @@ Hello
 Callout shapes are designed to wrap text, so they double as decorative containers on a slide.
 
 ::: {.shape-speech-bubble fill="#4DADAD" .shape-lg .shape-center}
-A point worth making
+Good point!
 :::
 
 ## Mix modifiers

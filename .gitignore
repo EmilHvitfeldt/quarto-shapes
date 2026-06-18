@@ -1,6 +1,8 @@
 # Generated files
 *_files/
 *.pdf
+# ...except the rendered example PDF, which the docs site links to/embeds
+!docs/examples/basic.pdf
 
 # Keep docs/ for GitHub Pages
 !docs/

@@ -104,6 +104,33 @@ Rotates the shape clockwise in 45° steps: `.shape-rotate-45`, `.shape-rotate-90
 
 See the [HTML example](examples/basic.html) for these modifiers applied across the full shape catalog.
 
+### Callout direction — `direction="…"`
+
+The callout and speech-bubble shapes (`.shape-callout-round`, `.shape-callout-oval`, `.shape-callout-rounded`, `.shape-speech-bubble`) point their tail down by default. Use the `direction=` attribute to point the tail **any** direction. The body stays upright and only the pointer moves: the filter recomputes the shape as a single outline (body + spike) for the requested angle, so there is no seam even on outlined callouts.
+
+`direction=` takes a compass angle in degrees, or one of the four keyword aliases:
+
+| Value | Pointer faces |
+|-------|---------------|
+| `0` / `up` | up |
+| `90` / `right` | right |
+| `180` / `down` (default) | down |
+| `270` / `left` | left |
+
+Any number works, so `direction="225"` points the tail down-left and `direction="30"` points up-and-to-the-right.
+
+```markdown
+::: {.shape-speech-bubble fill="lightyellow" direction="up"}
+Heads up!
+:::
+
+::: {.shape-callout-round fill="#4DADAD" direction="225"}
+Down-left
+:::
+```
+
+Works in HTML, RevealJS, and Typst. (`.shape-callout-cloud`, `.shape-callout-thought`, and `.shape-callout-explosion` keep their fixed designs.)
+
 ## Typst / PDF output
 
 Shapes also render in Quarto's `typst` format (PDF).

@@ -148,6 +148,136 @@ local function get_shape_name(classes)
   end
 end
 
+-- ── Parametric callouts ─────────────────────────────────────────────────────
+-- Callouts are built at render time from a body (ellipse or rounded rect) and a
+-- pointer (triangular spike) that can face any direction. The spike's base sits
+-- on the body's perimeter and its apex points outward, so changing direction
+-- moves only the spike: the body stays upright. The result is a single closed
+-- path that strokes cleanly (no seam between body and pointer).
+--
+-- direction= is a compass angle in degrees (0 = up, 90 = right, 180 = down,
+-- 270 = left). The keywords up/right/down/left are aliases for those numbers.
+
+-- Bodies are kept small enough that the spike apex stays inside the 0–100
+-- viewBox in every direction (body edge + SPIKE_LEN <= ~98), so nothing is
+-- clipped in HTML, RevealJS, or the Typst image bounds.
+local CALLOUTS = {
+  ["callout-round"]   = { kind = "ellipse", rx = 34, ry = 34 },
+  ["callout-oval"]    = { kind = "ellipse", rx = 36, ry = 28 },
+  ["callout-rounded"] = { kind = "rrect", x0 = 16, y0 = 26, x1 = 84, y1 = 74, r = 12 },
+  ["speech-bubble"]   = { kind = "rrect", x0 = 14, y0 = 22, x1 = 86, y1 = 78, r = 6 },
+}
+
+local DIRECTIONS = { up = 0, right = 90, down = 180, left = 270 }
+
+local function parse_direction(el)
+  local d = el.attributes.direction
+  if not d then return 180 end          -- default: pointer down
+  return DIRECTIONS[d] or tonumber(d) or 180
+end
+
+local SPIKE_HALF = 8     -- half-width of the spike base, in viewBox units
+local SPIKE_LEN  = 12    -- how far the apex extends past the body edge
+
+local function n(x) return string.format("%.2f", x) end
+
+local function ellipse_callout(s, vx, vy)
+  local cx, cy = 50, 50
+  local rx, ry = s.rx, s.ry
+  local alpha = 0.34                     -- half angular width of the gap (radians)
+  -- Ellipse parameter t0 whose point lies in the (vx, vy) direction.
+  local t0 = math.atan(rx * vy, ry * vx)
+  local function E(t) return cx + rx * math.cos(t), cy + ry * math.sin(t) end
+  local p1x, p1y = E(t0 + alpha)
+  local p2x, p2y = E(t0 - alpha)
+  -- Apex sits SPIKE_LEN beyond the body edge in the pointer direction, so the
+  -- spike is the same length whichever way it faces.
+  local e0x, e0y = E(t0)
+  local ax, ay = e0x + SPIKE_LEN * vx, e0y + SPIKE_LEN * vy
+  -- Major arc (large-arc=1, sweep=1) from p1 the long way to p2, avoiding the
+  -- gap at t0, then a line out to the apex and back to close the spike.
+  return string.format(
+    '<path d="M%s,%s A%s,%s 0 1 1 %s,%s L%s,%s Z" class="shape-path"/>',
+    n(p1x), n(p1y), rx, ry, n(p2x), n(p2y), n(ax), n(ay))
+end
+
+local function rrect_callout(s, vx, vy)
+  local cx, cy = 50, 50
+  local x0, y0, x1, y1, r = s.x0, s.y0, s.x1, s.y1, s.r
+
+  -- Find where the ray from the center exits the rectangle (slab method): the
+  -- boundary hit with the smallest positive parameter t.
+  local best
+  local function consider(t, edge, px, py)
+    if t and t > 1e-9 and (not best or t < best.t) then
+      best = { t = t, edge = edge, x = px, y = py }
+    end
+  end
+  if vx ~= 0 then
+    local t = (x1 - cx) / vx; local y = cy + t * vy
+    if y >= y0 and y <= y1 then consider(t, "right", x1, y) end
+    t = (x0 - cx) / vx; y = cy + t * vy
+    if y >= y0 and y <= y1 then consider(t, "left", x0, y) end
+  end
+  if vy ~= 0 then
+    local t = (y1 - cy) / vy; local x = cx + t * vx
+    if x >= x0 and x <= x1 then consider(t, "bottom", x, y1) end
+    t = (y0 - cy) / vy; x = cx + t * vx
+    if x >= x0 and x <= x1 then consider(t, "top", x, y0) end
+  end
+
+  local ex, ey = best.x, best.y
+  local apex_x, apex_y = ex + SPIKE_LEN * vx, ey + SPIKE_LEN * vy
+
+  -- Emit one straight edge as a line to its endpoint, splicing in the spike
+  -- (base1 → apex → base2) when this is the exit edge. `ux, uy` is the unit
+  -- travel direction along the edge; base points are clamped to the straight
+  -- portion so they never land in a corner arc.
+  local function edge(is_spike, endx, endy, ux, uy, lo, hi)
+    if not is_spike then return string.format("L%s,%s", n(endx), n(endy)) end
+    -- Base centre slides along the edge; its fixed coordinate is the edge line
+    -- (endy for horizontal edges, endx for vertical), not the body centre.
+    local along = ex * math.abs(ux) + ey * math.abs(uy)
+    along = math.max(lo + SPIKE_HALF, math.min(hi - SPIKE_HALF, along))
+    local bx, by
+    if ux ~= 0 then bx, by = along, endy else bx, by = endx, along end
+    local b1x, b1y = bx - SPIKE_HALF * ux, by - SPIKE_HALF * uy
+    local b2x, b2y = bx + SPIKE_HALF * ux, by + SPIKE_HALF * uy
+    return string.format("L%s,%s L%s,%s L%s,%s L%s,%s",
+      n(b1x), n(b1y), n(apex_x), n(apex_y), n(b2x), n(b2y), n(endx), n(endy))
+  end
+
+  local arc = string.format("A%s %s 0 0 1", r, r)
+  local parts = {
+    string.format("M%s,%s", n(x0 + r), n(y0)),
+    edge(best.edge == "top",    x1 - r, y0,  1,  0, x0 + r, x1 - r),
+    string.format("%s %s,%s", arc, n(x1), n(y0 + r)),
+    edge(best.edge == "right",  x1, y1 - r,  0,  1, y0 + r, y1 - r),
+    string.format("%s %s,%s", arc, n(x1 - r), n(y1)),
+    edge(best.edge == "bottom", x0 + r, y1, -1,  0, x0 + r, x1 - r),
+    string.format("%s %s,%s", arc, n(x0), n(y1 - r)),
+    edge(best.edge == "left",   x0, y0 + r,  0, -1, y0 + r, y1 - r),
+    string.format("%s %s,%s", arc, n(x0 + r), n(y0)),
+    "Z",
+  }
+  return string.format('<path d="%s" class="shape-path"/>', table.concat(parts, " "))
+end
+
+local function callout_svg(spec, deg)
+  local rad = math.rad(deg)
+  local vx, vy = math.sin(rad), -math.cos(rad)
+  if spec.kind == "ellipse" then return ellipse_callout(spec, vx, vy) end
+  return rrect_callout(spec, vx, vy)
+end
+
+-- Returns the SVG inner markup for a shape, computing parametric callouts from
+-- their direction= attribute and falling back to the static catalog otherwise.
+local function get_shape_markup(el, shape)
+  local spec = CALLOUTS[shape]
+  if spec then return callout_svg(spec, parse_direction(el)) end
+  return shapes[shape]
+end
+
 local function render_html(el, shape)
   quarto.doc.add_html_dependency({
     name = "shapes",
@@ -193,7 +323,7 @@ local function render_html(el, shape)
     .. '<div class="shape-content">',
     class_str,
     style_attr,
-    shapes[shape]
+    get_shape_markup(el, shape)
   ))
   local close = pandoc.RawBlock("html", "</div></div>")
 
@@ -238,7 +368,7 @@ end
 local function render_typst(el, shape)
   local m = parse_typst_modifiers(el)
 
-  local elem = shapes[shape]:gsub('"', "'")
+  local elem = get_shape_markup(el, shape):gsub('"', "'")
   elem = elem:gsub("class='shape%-path'", string.format(
     "fill='%s' stroke='%s' stroke-width='%s'", m.fill, m.stroke, m.width))
   local svg = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"

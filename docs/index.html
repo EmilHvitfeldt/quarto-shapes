@@ -170,6 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#stroke-stroke-.shape-stroke-" id="toc-stroke-stroke-.shape-stroke-" class="nav-link" data-scroll-target="#stroke-stroke-.shape-stroke-">Stroke — <code>stroke="…"</code> + <code>.shape-stroke-*</code></a></li>
   <li><a href="#size-.shape-smmdlgfull-or-size" id="toc-size-.shape-smmdlgfull-or-size" class="nav-link" data-scroll-target="#size-.shape-smmdlgfull-or-size">Size — <code>.shape-{sm,md,lg,full}</code> or <code>size="…"</code></a></li>
   <li><a href="#rotation-.shape-rotate-" id="toc-rotation-.shape-rotate-" class="nav-link" data-scroll-target="#rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></a></li>
+  <li><a href="#callout-direction-direction" id="toc-callout-direction-direction" class="nav-link" data-scroll-target="#callout-direction-direction">Callout direction — <code>direction="…"</code></a></li>
   </ul></li>
   <li><a href="#typst-pdf-output" id="toc-typst-pdf-output" class="nav-link" data-scroll-target="#typst-pdf-output">Typst / PDF output</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
@@ -363,6 +364,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="rotation-.shape-rotate-">Rotation — <code>.shape-rotate-*</code></h3>
 <p>Rotates the shape clockwise in 45° steps: <code>.shape-rotate-45</code>, <code>.shape-rotate-90</code>, <code>.shape-rotate-135</code>, <code>.shape-rotate-180</code>, <code>.shape-rotate-225</code>, <code>.shape-rotate-270</code>, <code>.shape-rotate-315</code>.</p>
 <p>See the <a href="examples/basic.html">HTML example</a> for these modifiers applied across the full shape catalog.</p>
+</section>
+<section id="callout-direction-direction" class="level3">
+<h3 class="anchored" data-anchor-id="callout-direction-direction">Callout direction — <code>direction="…"</code></h3>
+<p>The callout and speech-bubble shapes (<code>.shape-callout-round</code>, <code>.shape-callout-oval</code>, <code>.shape-callout-rounded</code>, <code>.shape-speech-bubble</code>) point their tail down by default. Use the <code>direction=</code> attribute to point the tail <strong>any</strong> direction. The body stays upright and only the pointer moves: the filter recomputes the shape as a single outline (body + spike) for the requested angle, so there is no seam even on outlined callouts.</p>
+<p><code>direction=</code> takes a compass angle in degrees, or one of the four keyword aliases:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Pointer faces</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code> / <code>up</code></td>
+<td>up</td>
+</tr>
+<tr class="even">
+<td><code>90</code> / <code>right</code></td>
+<td>right</td>
+</tr>
+<tr class="odd">
+<td><code>180</code> / <code>down</code> (default)</td>
+<td>down</td>
+</tr>
+<tr class="even">
+<td><code>270</code> / <code>left</code></td>
+<td>left</td>
+</tr>
+</tbody>
+</table>
+<p>Any number works, so <code>direction="225"</code> points the tail down-left and <code>direction="30"</code> points up-and-to-the-right.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>::: {.shape-speech-bubble fill="lightyellow" direction="up"}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Heads up!</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>::: {.shape-callout-round fill="#4DADAD" direction="225"}</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>Down-left</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Works in HTML, RevealJS, and Typst. (<code>.shape-callout-cloud</code>, <code>.shape-callout-thought</code>, and <code>.shape-callout-explosion</code> keep their fixed designs.)</p>
 </section>
 </section>
 <section id="typst-pdf-output" class="level2">

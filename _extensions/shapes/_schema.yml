@@ -15,6 +15,11 @@ attributes:
     size:
       type: string
       description: "Custom size as any CSS length (e.g. \"3cm\", \"200px\"); overrides the .shape-{sm,md,lg,full} classes."
+    direction:
+      type: string
+      description: "Direction a callout/speech-bubble pointer faces, as a compass angle in degrees (0=up, 90=right, 180=down, 270=left) or a keyword. Default \"down\". Applies to .shape-callout-round, .shape-callout-oval, .shape-callout-rounded, and .shape-speech-bubble."
+      completion:
+        values: ["down", "up", "left", "right"]
 
 classes:
   shape-arc:

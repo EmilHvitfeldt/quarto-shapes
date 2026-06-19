@@ -346,6 +346,41 @@ Boom!
 [`.shape-callout-explosion`]{.shape-name}
 :::::
 
+### Pointer direction
+
+Use `direction=` to point the tail any way — a keyword (`up`/`right`/`down`/`left`) or a compass angle in degrees. The body stays upright; only the pointer moves.
+
+::::: {.shape-item}
+::: {.shape-speech-bubble fill="#42526C" .shape-md direction="up"}
+up
+:::
+[`direction="up"`]{.shape-name}
+:::::
+::::: {.shape-item}
+::: {.shape-speech-bubble fill="#42526C" .shape-md direction="left"}
+left
+:::
+[`direction="left"`]{.shape-name}
+:::::
+::::: {.shape-item}
+::: {.shape-callout-round fill="#4DADAD" .shape-md direction="45"}
+45°
+:::
+[`direction="45"`]{.shape-name}
+:::::
+::::: {.shape-item}
+::: {.shape-callout-round fill="#4DADAD" .shape-md direction="225"}
+225°
+:::
+[`direction="225"`]{.shape-name}
+:::::
+::::: {.shape-item}
+::: {.shape-callout-oval fill="none" stroke="#E24A68" .shape-stroke-md .shape-md direction="300"}
+300°
+:::
+[`direction="300"`]{.shape-name}
+:::::
+
 ## Flowchart
 
 Standard flowchart and diagram symbols (process, data, decision, etc.).
